@@ -1,20 +1,10 @@
-<script type="text/javascript" src="http://libraries.mit.edu/wp-content/themes/libraries/js/modernizr.js?ver=2.8.1"/></script>
-
-<!--added by springshare support-->
-<meta name="google-site-verification" content="W4ndmQs2yM0nT5SkZiQJXPjyEIZCIt3o3uhWg6_klbI" />
-
-<!--added by springshare support for guide subheader issue -->
-<style>
-#guide_tab_title_bar { clear: both; }
-</style>
-
 <!--added by Darcy to confirm w/ Google webmaster tools we own this site-->
 <meta name="google-site-verification" content="82Cv3HFWvcefC_9XauvglcfB4h3o0uuiC3nKWWkL_eE" />
 
 <!--meta tag to scale mobile device display-->
 <meta name="viewport" content="width=device-width, maximum-scale=1">
 
-<script>
+<script type="text/javascript">
 jQuery(document).ready(function($) {
   jQuery("img[alt='null'], img[alt='Null'], img[alt='NULL']").attr("alt", "");
   var libchat_efc75c55947db323d4faab725b79307f = { iid:59, key:'fb10446730e271c', width:'240' };
@@ -25,49 +15,8 @@ jQuery(document).ready(function($) {
 });
 </script>
 
-<!--main theme definitions-->
-<style>
-  /*
-  *** Libguides overrides
-  */
-  body {
-    font-size: 16px;
-  }
-  footer h4 {
-    font: inherit;
-    padding: 0;
-  }
-  @media only screen and (max-width: 800px) {
-    /* Start shrinking the content column */
-    div#wrapper,
-    div#container {
-      max-width: 100%;
-    }
-    /* Undo oversize padding on menu to allow it to collapse */
-    nav#customNav ul li a {
-      padding: 5px 1%;
-      font-size: 13px;
-    }
-    div#content div#contentleft,
-    div#content div#contentcenter,
-    div#content div#contentright {
-      width: 100% !important;
-    }
-
-  }
-  /* Phone/4-inch styles */
-  @media only screen and (max-width: 650px) {
-    /* Header items in a row, by force */
-    div#content {
-      padding: 0;
-    }
-  }
-  /*
-  *******************************************************************************
-  *******************************************************************************
-  *******************************************************************************
-  *** Basic styles
-  */
+<style type="text/css">
+/* Basic layout rules */
 * {
   -moz-box-sizing: border-box;
        box-sizing: border-box;
@@ -85,7 +34,6 @@ a {
 }
 
 .flex-container {
-  display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
@@ -109,20 +57,13 @@ a {
     display: block;
   }
 }
-  /*
-  *******************************************************************************
-  *******************************************************************************
-  *******************************************************************************
-  *** Header styles
-  */
-  /* Header & Nav */
+
+/* Header & Nav */
 .header-main {
-  -webkit-box-align: end;
   -webkit-align-items: flex-end;
       -ms-flex-align: end;
           align-items: flex-end;
   background: #333333;
-  -webkit-box-pack: start;
   -webkit-justify-content: flex-start;
       -ms-flex-pack: start;
           justify-content: flex-start;
@@ -139,11 +80,9 @@ a {
 }
 @media only screen and (min-width: 569px) {
   .header-main {
-    -webkit-box-align: start;
     -webkit-align-items: flex-start;
         -ms-flex-align: start;
             align-items: flex-start;
-    -webkit-box-pack: justify;
     -webkit-justify-content: space-between;
         -ms-flex-pack: justify;
             justify-content: space-between;
@@ -153,7 +92,6 @@ a {
 .header-main > [class*="link"] {
   color: #fff;
   font-size: 0.4375em;
-  -webkit-box-ordinal-group: 401;
   -webkit-order: 400;
       -ms-flex-order: 400;
           order: 400;
@@ -195,7 +133,6 @@ a {
         -ms-flex-item-align: end;
             align-self: flex-end;
     display: block;
-    -webkit-box-ordinal-group: 5;
     -webkit-order: 4;
         -ms-flex-order: 4;
             order: 4;
@@ -212,12 +149,9 @@ a {
   -webkit-align-self: flex-end;
       -ms-flex-item-align: end;
           align-self: flex-end;
-  display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
   -webkit-flex-direction: column;
       -ms-flex-direction: column;
           flex-direction: column;
@@ -260,7 +194,6 @@ a {
   line-height: 1;
   margin-top: -1.25em;
   margin-left: 0.75em;
-  -webkit-box-ordinal-group: 3;
   -webkit-order: 2;
       -ms-flex-order: 2;
           order: 2;
@@ -342,7 +275,6 @@ a {
   background: white;
   box-shadow: 0 3px 3px #cccccc;
   height: auto;
-  -webkit-box-flex: 0;
   -webkit-flex: none;
       -ms-flex: none;
           flex: none;
@@ -376,7 +308,6 @@ a {
 }
 @media only screen and (min-width: 569px) {
   .nav-main {
-    -webkit-box-align: stretch;
     -webkit-align-items: stretch;
         -ms-flex-align: stretch;
             align-items: stretch;
@@ -384,7 +315,6 @@ a {
     -webkit-flex-wrap: nowrap;
         -ms-flex-wrap: nowrap;
             flex-wrap: nowrap;
-    -webkit-box-ordinal-group: 4;
     -webkit-order: 3;
         -ms-flex-order: 3;
             order: 3;
@@ -403,12 +333,9 @@ a {
   }
 
   .nav-main .small a {
-    -webkit-box-align: center;
     -webkit-align-items: center;
         -ms-flex-align: center;
             align-items: center;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
     -webkit-flex-direction: column;
         -ms-flex-direction: column;
             flex-direction: column;
@@ -506,7 +433,6 @@ a {
   .link-primary > a {
     border-bottom: none;
     color: #fff;
-    display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
@@ -540,7 +466,6 @@ a {
 
 @media only screen and (min-width: 569px) {
   .link-primary .links-sub {
-    display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
@@ -572,13 +497,13 @@ a {
 }
 
 .link-primary .links-sub .bottom.extra span:first-of-type:after {
-  content: url(http://libraries.mit.edu/wp-content/themes/libraries/images/arrow-right-sfw.svg);
+  content: url('http://libraries.mit.edu/wp-content/themes/libraries/images/arrow-right-sfw.svg');
   display: inline-block;
   margin-left: 0.25em;
 }
 
 .link-primary .links-sub .bottom:not(.extra):after {
-  content: url(http://libraries.mit.edu/wp-content/themes/libraries/images/arrow-right-sfw.svg);
+  content: url('http://libraries.mit.edu/wp-content/themes/libraries/images/arrow-right-sfw.svg');
   display: inline-block;
   margin-left: 0.25em;
 }
@@ -737,7 +662,6 @@ a {
   fill: #ebf5ff;
   font-size: 16px;
   font-size: 1rem;
-  -webkit-box-ordinal-group: 2;
   -webkit-order: 1;
       -ms-flex-order: 1;
           order: 1;
@@ -767,39 +691,7 @@ a {
   display: none;
 }
 
-/* no-flexbox fallbacks */
-.no-flexbox.no-flexboxlegacy .flex-container > a,
-.no-flexbox.no-flexboxlegacy .flex-container > button,
-.no-flexbox.no-flexboxlegacy .flex-container > div,
-.no-flexbox.no-flexboxlegacy .flex-container > form,
-.no-flexbox.no-flexboxlegacy .flex-container > header,
-.no-flexbox.no-flexboxlegacy .flex-container > h1,
-.no-flexbox.no-flexboxlegacy .flex-container > h2,
-.no-flexbox.no-flexboxlegacy .flex-container > h3,
-.no-flexbox.no-flexboxlegacy .flex-container > input,
-.no-flexbox.no-flexboxlegacy .flex-container > nav,
-.no-flexbox.no-flexboxlegacy .flex-container > span,
-.no-flexbox.no-flexboxlegacy .flex-container > svg,
-.no-flexbox.no-flexboxlegacy .flex-container > ul {
-  float: left;
-  width: auto;
-}
-
-.no-flexbox.no-flexboxlegacy .flex-container:after {
-  clear: both;
-  content: '';
-  display: table;
-}
-
-.no-flexbox.no-flexboxlegacy .flex-item {
-  float: left;
-}
-  /*
-  *******************************************************************************
-  *******************************************************************************
-  *******************************************************************************
-  *** Footer styles
-  */
+/* Footer */
 .footer-main {
   background: #474747;
   -webkit-flex-wrap: wrap;
@@ -808,6 +700,7 @@ a {
   clear: both;
   max-width: 1024px;
   width: 100%;
+  margin: 0 auto;
 }
 
 @media only screen and (min-width: 769px) {
@@ -842,11 +735,9 @@ a {
 
 @media only screen and (min-width: 569px) {
   .footer-main .identity {
-    -webkit-box-align: end;
     -webkit-align-items: flex-end;
         -ms-flex-align: end;
             align-items: flex-end;
-    -webkit-box-pack: justify;
     -webkit-justify-content: space-between;
         -ms-flex-pack: justify;
             justify-content: space-between;
@@ -859,7 +750,6 @@ a {
 
 @media only screen and (min-width: 569px) {
   .footer-main .links-all {
-    display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
@@ -873,7 +763,7 @@ a {
 }
 
 .footer-main .links-all .flex-item {
-  margin-right: 0.75em;
+  margin-right: 1.75em;
 }
 
 .footer-main .links-all .link-sub {
@@ -973,7 +863,6 @@ a {
   }
 }
 .footer-main .social {
-  -webkit-box-align: center;
   -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center;
@@ -1030,17 +919,13 @@ a {
   }
 }
 .footer-info-institute {
-  -webkit-box-align: baseline;
   -webkit-align-items: baseline;
       -ms-flex-align: baseline;
           align-items: baseline;
   background: #595959;
-  display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
   -webkit-flex-direction: column;
       -ms-flex-direction: column;
           flex-direction: column;
@@ -1049,12 +934,11 @@ a {
           flex-wrap: wrap;
   padding: 1.5em 1em;
   max-width: 1024px;
+  margin: 0 auto;
 }
 
 @media only screen and (min-width: 569px) {
   .footer-info-institute {
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
     -webkit-flex-direction: row;
         -ms-flex-direction: row;
             flex-direction: row;
@@ -1219,4 +1103,5 @@ a {
 .no-flexbox.no-flexboxlegacy .flex-item {
   float: left;
 }
+
 </style>
