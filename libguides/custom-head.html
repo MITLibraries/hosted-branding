@@ -1178,9 +1178,29 @@ a {
  font-size: 18px;
 }
 
+.s-lib-box-content {
+ padding: 20px;
+}
+
 /* Changes size of Email Me button*/
 .s-lib-profile-email > a {
     font-size: 1em !important;
+}
+
+/* Overriding the accordion markup with changeable arrows */
+.accordion-group .accordion-heading strong {
+  display: none;
+}
+.accordion-group .accordion-toggle {
+  margin-left: 15px;
+}
+.accordion-group .accordion-toggle:before {
+  content: '\f063';
+  font-family: fontAwesome;
+  font-size: 10px;
+}
+.accordion-group .accordion-toggle.collapsed:before {
+  content: '\f061';
 }
 
 </style>
