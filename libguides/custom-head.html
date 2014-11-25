@@ -33,6 +33,7 @@ body {
 
 a {
   text-decoration: none;
+  color: #338bc5;
 }
 
 .flex-container {
@@ -1174,33 +1175,35 @@ a {
 }
 
 .s-lib-box .s-lib-box-title {
- color: #000000;
  font-size: 18px;
+ color: #111;
+}
+
+.s-lib-box {
+ color: #111;
 }
 
 .s-lib-box-content {
  padding: 20px;
 }
 
-/* Changes size of Email Me button*/
+/* Hides Email Me button*/
 .s-lib-profile-email > a {
-    font-size: 1em !important;
+    display: none;
+}
+
+/*Hides website, Skype, & Social links from profile*/
+.fa-bookmark, .fa-skype, .s-lib-profile-social {
+ display: none;
 }
 
 /* Overriding the accordion markup with changeable arrows */
-.accordion-group .accordion-heading strong {
-  display: none;
-}
 .accordion-group .accordion-toggle {
-  margin-left: 15px;
+  margin-left: 0px;
+  background: url('http://libraries.mit.edu/images/libguides-arrow-down.png') no-repeat left center;
+  padding-left: 15px;
 }
-.accordion-group .accordion-toggle:before {
-  content: '\f063';
-  font-family: fontAwesome;
-  font-size: 10px;
+.accordion-group .accordion-toggle.collapsed {
+  background-image: url('http://libraries.mit.edu/images/libguides-arrow-right.png')
 }
-.accordion-group .accordion-toggle.collapsed:before {
-  content: '\f061';
-}
-
 </style>
