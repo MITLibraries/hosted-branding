@@ -1,20 +1,1270 @@
-<link rel="stylesheet" type="text/css" href="https://libraries.mit.edu/css/libguides/main.css" />
-<script  type="text/javascript" src="https://libraries.mit.edu/css/libguides/modernizr.js"/></script>
+<link rel="shortcut icon" href="http://libraries.mit.edu/favicon.ico" type="image/vnd.microsoft.icon" />
 
-<!--added by springshare support-->
-<meta name="google-site-verification" content="W4ndmQs2yM0nT5SkZiQJXPjyEIZCIt3o3uhWg6_klbI" />
-
-<!--added by springshare support for guide subheader issue -->
-<style>
-#guide_tab_title_bar { clear: both; }
-</style>
+<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Open+Sans:300,400,400italic,600,600italic,700,700italic">
 
 <!--added by Darcy to confirm w/ Google webmaster tools we own this site-->
 <meta name="google-site-verification" content="82Cv3HFWvcefC_9XauvglcfB4h3o0uuiC3nKWWkL_eE" />
+
+<!--meta tag to scale mobile device display-->
 <meta name="viewport" content="width=device-width, maximum-scale=1">
 
-<script>
+<script type="text/javascript">
 jQuery(document).ready(function($) {
   jQuery("img[alt='null'], img[alt='Null'], img[alt='NULL']").attr("alt", "");
+  var libchat_efc75c55947db323d4faab725b79307f = { iid:59, key:'fb10446730e271c', width:'240' };
+  $('header .menu--toggle').click(function(){
+    $('#nav-main').toggleClass('active');
+    $('.wrap-page').toggleClass('mobile-nav-active');
+  });
 });
 </script>
+
+<style type="text/css">
+/* Basic layout rules */
+* {
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+h1#s-lg-guide-name {
+    font-size: 30px;
+}
+
+h3 {
+  font-size: 20px;
+}
+
+body {
+  font-family: "Open Sans", Helvetica, sans-serif;
+  font-size: 16px; /* was 100%; */
+  line-height: 1.4;
+  text-rendering: optimizeLegibility;
+}
+
+a {
+  text-decoration: none;
+  color: #338bc5;
+}
+
+.s-lib-box-content .ui-widget {
+    font-family: "Open Sans", Helvetica, sans-serif;
+    font-size: 16px; /* was 100%; */
+    line-height: 1.4;
+    text-rendering: optimizeLegibility;
+}
+
+.ui-widget-content a, a {
+  text-decoration: none;
+  color: #338bc5;
+}
+
+.flex-container {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.hidden-mobile {
+  display: none;
+}
+
+.hidden-non-mobile {
+  display: block;
+}
+
+@media only screen and (min-width: 569px) {
+  .hidden-non-mobile {
+    display: none;
+  }
+}
+
+@media only screen and (min-width: 569px) {
+  .hidden-mobile {
+    display: block;
+  }
+}
+
+/* Header & Nav */
+.header-main {
+  -webkit-align-items: flex-end;
+  -ms-flex-align: end;
+  align-items: flex-end;
+  background: #333333;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  clear: both;
+  margin: 0 auto;
+  max-width: 1170px;
+  width: 100%;
+}
+
+@media only screen and (min-width: 569px) {
+  .header-main {
+    width: 100%;
+  }
+}
+
+@media only screen and (min-width: 569px) {
+  .header-main {
+    -webkit-align-items: flex-start;
+    -ms-flex-align: start;
+    align-items: flex-start;
+    -webkit-justify-content: space-between;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    padding: 0 1em;
+  }
+}
+
+.header-main > [class*="link"] {
+  color: #fff;
+  font-size: 0.4375em;
+  -webkit-order: 400;
+  -ms-flex-order: 400;
+  order: 400;
+  text-transform: uppercase;
+}
+
+.header-main h1 {
+  margin-bottom: 0;
+}
+
+.header-main .logo-mit-lib {
+  fill: white;
+}
+
+.header-main .logo-mit-lib svg {
+  max-height: 4em;
+}
+
+.header-main .logo-mit-lib .arch {
+  display: none;
+}
+
+@media only screen and (min-width: 569px) {
+  .header-main .logo-mit-lib .arch {
+    display: block;
+  }
+}
+
+.header-main .link-account {
+  margin-left: 2em;
+}
+
+.header-main .link-logo-mit {
+  display: none;
+}
+
+@media only screen and (min-width: 569px) {
+  .header-main .link-logo-mit {
+    -webkit-align-self: flex-end;
+    -ms-flex-item-align: end;
+    align-self: flex-end;
+    display: block;
+    -webkit-order: 4;
+    -ms-flex-order: 4;
+    order: 4;
+    margin-bottom: 16px;
+    margin-bottom: 1rem;
+  }
+}
+
+.header-main .link-site-search {
+  margin-left: 5.5em;
+}
+
+.header-main .link-account,
+.header-main .link-site-search {
+  -webkit-align-self: flex-end;
+  -ms-flex-item-align: end;
+  align-self: flex-end;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  padding-bottom: 8px;
+  padding-bottom: 0.5rem;
+}
+
+.header-main .link-account svg,
+.header-main .link-site-search svg {
+  fill: #c8c8c8;
+  margin: 0 auto;
+}
+
+@media only screen and (min-width: 569px) {
+  .header-main .link-account,
+  .header-main .link-site-search {
+    display: none;
+  }
+}
+
+.header-main .logo-mit {
+  display: none;
+}
+
+@media only screen and (min-width: 569px) {
+  .header-main .logo-mit {
+    display: block;
+    height: auto;
+    max-height: 45px;
+    max-height: 2.8125rem;
+    fill: #b9b7b6;
+  }
+
+  .header-main .logo-mit .color {
+    fill: #fff;
+  }
+}
+
+.header-main .name-site {
+  font-size: 16px;
+  font-size: 1rem;
+  line-height: 1;
+  margin-top: -1.25em;
+  margin-left: 0.75em;
+  -webkit-order: 2;
+  -ms-flex-order: 2;
+  order: 2;
+  padding-bottom: 8px;
+  padding-bottom: 0.5rem;
+  width: 9.4375em; /* was 6.4375em */
+}
+
+@media only screen and (min-width: 569px) {
+  .header-main .name-site {
+    margin-top: 0.9em;
+    margin-left: 0;
+    padding-bottom: 0;
+  }
+}
+
+@media only screen and (max-width: 320px) {
+  .no-flexbox.flexboxlegacy .header-main .icon-account,
+  .no-flexbox.flexboxlegacy .header-main .icon-search {
+    max-height: 16px;
+    max-height: 1rem;
+    max-width: 16px;
+    max-width: 1rem;
+  }
+}
+
+@media only screen and (max-width: 320px) {
+  .no-flexbox.flexboxlegacy .header-main .menu--toggle svg {
+    height: 100%;
+    padding: 1em;
+    width: auto;
+  }
+}
+
+.lte-ie9 .header-main {
+  height: 62px;
+  overflow: hidden;
+}
+
+.lte-ie9 .header-main * {
+  height: 62px;
+  overflow: hidden;
+}
+
+.lte-ie9 .header-main .name-site {
+  margin-left: 32px;
+  max-width: 103px;
+}
+
+.lte-ie9 .header-main .logo-mit {
+  margin-top: 24px;
+  margin-left: 40px;
+}
+
+.lte-ie9 .header-main .small {
+  font-size: 10px;
+  font-size: 0.625rem;
+  padding-top: 26px;
+  padding-top: 1.625rem;
+}
+
+.lte-ie9 .header-main .small svg {
+  display: none;
+}
+
+.nav-main {
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-transform: translateY(-1000%);
+  -ms-transform: translateY(-1000%);
+  transform: translateY(-1000%);
+  z-index: 7000;
+  margin: 0;
+  padding: 0;
+  width: 0;
+  height: 0;
+  overflow: hidden;
+}
+
+.nav-main.active {
+  background: white;
+  box-shadow: 0 3px 3px #cccccc;
+  height: auto;
+  -webkit-flex: none;
+  -ms-flex: none;
+  flex: none;
+  padding: 0px 8px 8px 8px;
+  padding: 0rem 0.5rem 0.5rem 0.5rem;
+  position: absolute;
+  -webkit-transform: translateY(3em);
+  -ms-transform: translateY(3em);
+  transform: translateY(3em);
+  top: 0;
+  width: 100%;
+}
+
+.nav-main .small {
+  display: none;
+}
+
+@media only screen and (min-width: 569px) {
+  .nav-main .small {
+    display: block;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .nav-main {
+    font-size: 0.75em;
+  }
+
+  .nav-main .small {
+    font-size: 0.25em;
+  }
+}
+
+@media only screen and (min-width: 569px) {
+  .nav-main {
+    -webkit-align-items: stretch;
+    -ms-flex-align: stretch;
+    align-items: stretch;
+    height: auto;
+    -webkit-flex-wrap: nowrap;
+    -ms-flex-wrap: nowrap;
+    flex-wrap: nowrap;
+    -webkit-order: 3;
+    -ms-flex-order: 3;
+    order: 3;
+    overflow: visible;
+    width: auto;
+    -webkit-transform: translateY(0%);
+    -ms-transform: translateY(0%);
+    transform: translateY(0%);
+  }
+
+  .nav-main .small {
+    font-size: 0.5em;
+    line-height: 1.4;
+    padding-top: 8px;
+    padding-top: 0.5rem;
+  }
+
+  .nav-main .small a {
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    padding-bottom: 8px;
+    padding-bottom: 1.1rem;
+    text-transform: uppercase;
+  }
+
+  .nav-main .small svg {
+    fill: #fff;
+    margin-bottom: 1em;
+  }
+}
+
+.nav-main .chat {
+  display: none;
+}
+
+@media only screen and (min-width: 569px) {
+  .nav-main .chat {
+    display: block;
+  }
+
+  .nav-main .chat .links-sub {
+    background: #f3f3f3;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    min-width: 150px;
+    min-width: 9.375rem;
+    width: auto;
+  }
+
+  .nav-main .chat .links-sub a:hover {
+    background: none;
+  }
+
+  .nav-main .chat .more {
+    display: block;
+    font-size: 12px;
+    font-size: 0.75rem;
+    text-align: center;
+    text-transform: none;
+    width: 100%;
+  }
+
+  .nav-main .chat .wrap-button-chat {
+    min-height: 46px;
+    min-height: 2.875rem;
+    padding: 16px 8px 0px 8px;
+    padding: 1rem 0.5rem 0rem 0.5rem;
+    min-width: 100%;
+  }
+
+  .nav-main .chat .wrap-button-chat #libchat_btn_widget {
+    border: 1px solid #666;
+  }
+}
+
+.link-primary {
+  position: relative;
+  -webkit-transition: background-color 0.3s;
+  transition: background-color 0.3s;
+  width: 100%;
+}
+
+@media only screen and (min-width: 569px) {
+  .link-primary {
+    border-right: 1px solid #666666;
+    padding-top: 1em;
+    width: auto;
+  }
+}
+
+@media only screen and (min-width: 569px) {
+  .link-primary:hover {
+    background: #5889c2;
+  }
+}
+
+.link-primary:hover .links-sub {
+  box-shadow: 0 0 2px #444;
+  max-height: 1000px;
+  opacity: 1;  overflow: visible;
+  -webkit-transition: max-height 0.3s, margin 0.3s, opacity 0.3s, overflow 0.3s, padding-top 0.3s, padding-bottom 0.3s;
+  transition: max-height 0.3s, margin 0.3s, opacity 0.3s, overflow 0.3s, padding-top 0.3s, padding-bottom 0.3s;
+}
+
+.link-primary > a {
+  border-bottom: 1px solid #b5b5b5;
+  display: block;
+  padding: 8px;
+  padding: 0.5rem;
+  position: relative;
+}
+
+@media only screen and (min-width: 569px) {
+  .link-primary > a {
+    border-bottom: none;
+    color: #fff;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    height: 100%;
+    padding-top: 1em;
+  }
+}
+
+.link-primary > a.active {
+  background: lightgray;
+  box-shadow: 0 0 2px #444, inset 1px 0 0 gray, inset -1px 0 0 gray, inset 0 1px 0 gray;
+}
+
+.link-primary .col-1 {
+  background: #fff;
+}
+
+.link-primary .col-2 {
+  background: #f3f3f3;
+}
+
+.link-primary .links-sub {
+  display: none;
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  position: absolute;
+  -webkit-transition: max-height 0.3s, margin 0.3s, opacity 0.3s, overflow 0.3s, padding-top 0.3s, padding-bottom 0.3s;
+  transition: max-height 0.3s, margin 0.3s, opacity 0.3s, overflow 0.3s, padding-top 0.3s, padding-bottom 0.3s;
+  width: 31.75em;
+}
+
+@media only screen and (min-width: 569px) {
+  .link-primary .links-sub {
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+
+.link-primary .links-sub a {
+  color: #5889c2;
+  display: block;
+  font-weight: 600;
+  padding: 0.5em;
+}
+
+.link-primary .links-sub a:hover {
+  background: #d9d9d9;
+}
+
+.link-primary .links-sub [class*="col-"] {
+  width: 50%;
+}
+
+.link-primary .links-sub .about {
+  display: block;
+  font-size: 0.6875em;
+  font-weight: normal;
+}
+
+.link-primary .links-sub .bottom {
+  border-top: 1px solid #dedede;
+}
+
+.link-primary .links-sub .bottom.extra span:first-of-type:after {
+  content: url('http://libraries.mit.edu/wp-content/themes/libraries/images/arrow-right-sfw.svg');
+  display: inline-block;
+  margin-left: 0.25em;
+}
+
+.link-primary .links-sub .bottom:not(.extra):after {
+  content: url('http://libraries.mit.edu/wp-content/themes/libraries/images/arrow-right-sfw.svg');
+  display: inline-block;
+  margin-left: 0.25em;
+}
+
+.link-primary .bottom:not(.extra) span:not(:first-of-type):before {
+  color: #5889c2;
+  content: '|';
+  display: inline-block;
+  margin-right: 4px;
+}
+
+.link-primary .heading-col {
+  color: #7c7c7d;
+  display: block;
+  font-size: 0.6em;
+  font-weight: bold;
+  margin: 16px 0px 8px 8px;
+  margin: 1rem 0rem 0.5rem 0.5rem;
+  text-transform: uppercase;
+}
+
+.link-primary .push {
+  right: 0;
+}
+
+.no-csstransitions .link-primary .links-sub {
+  height: 0;
+  margin: 0;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 0;
+}
+
+.no-csstransitions .link-primary:hover .links-sub {
+  height: auto;
+  margin: auto;
+  overflow: visible;
+  padding: 16px;
+  padding: 1rem;
+  width: 600px;
+}
+
+.nav-secondary {
+  border-bottom: 1px solid #dedede;
+  font-size: 16px;
+  font-size: 1rem;
+  margin: 0 20px;
+  z-index: 7000;
+}
+
+@media only screen and (max-width: 320px) {
+  .nav-secondary {
+    background: #333333;
+    height: 0;
+    margin: 0;
+    overflow: hidden;
+    padding: 0;
+  }
+
+  .nav-secondary.active {
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    padding: 0;
+  }
+}
+
+.nav-secondary ul {
+  list-style: none;
+}
+
+.nav-secondary .menu > ul > li {
+  display: inline-block;
+  position: relative;
+}
+
+@media only screen and (max-width: 320px) {
+  .nav-secondary .menu > ul > li {
+    display: block;
+  }
+}
+
+.nav-secondary .menu > ul > li:nth-child(n+4) ul {
+  right: 0;
+}
+
+.nav-secondary .menu > ul > li:hover {
+  background: #dedede;
+  box-shadow: 0 0 2px #444;
+  -webkit-transition: background-color 0.3s;
+  transition: background-color 0.3s;
+}
+
+@media only screen and (max-width: 320px) {
+  .nav-secondary .menu > ul > li:hover {
+    background: none;
+    box-shadow: none;
+  }
+}
+
+.nav-secondary .menu > ul > li:hover li {
+  background: #dedede;
+  border-top: 1px solid #ababab;
+  height: auto;
+  line-height: 1;
+  margin: auto;
+  opacity: 1;
+  overflow: visible;
+  width: 100%;
+  z-index: 7000;
+  -webkit-transition: opacity 0.3s;
+  transition: opacity 0.3s;
+}
+
+@media only screen and (max-width: 320px) {
+  .nav-secondary .menu > ul > li:hover li {
+    display: none;
+  }
+}
+
+.nav-secondary .menu > ul > li:hover li a {
+  display: block;
+  padding: 16px;
+  padding: 1rem;
+}
+
+.nav-secondary .menu > ul > li > a {
+  display: block;
+  padding: 16px;
+  padding: 1rem;
+}
+
+@media only screen and (max-width: 320px) {
+  .nav-secondary .menu > ul > li > a {
+    color: white;
+  }
+}
+
+.nav-secondary .menu > ul > li li {
+  height: 0;
+  line-height: 0;
+  margin: 0;
+  opacity: 0;
+  overflow: hidden;
+  padding: 0;
+  position: relative;
+  width: 0;
+}
+
+.nav-secondary .menu > ul > li ul {
+  box-shadow: 0 1px 2px #444;
+  position: absolute;
+  width: 320px;
+  width: 20rem;
+}
+.menu--toggle {
+  background: #100c0d;
+  cursor: pointer;
+  fill: #ebf5ff;
+  font-size: 16px;
+  font-size: 1rem;
+  -webkit-order: 1;
+  -ms-flex-order: 1;
+  order: 1;
+  width: 14.375%;
+}
+
+@media only screen and (min-width: 569px) {
+  .menu--toggle {
+    display: none;
+  }
+}
+
+.menu--toggle svg {
+  display: block;
+  margin: 1em auto;
+}
+
+.no-flexbox .link-primary.chat:hover .links-sub {
+  display: block;
+}
+
+.no-flexbox .link-primary.chat:hover .links-sub a {
+  display: block;
+  width: 100%;
+}
+
+.lte-ie9 .nav-main .links-sub {
+  display: none;
+}
+
+/* Footer */
+.footer-main {
+  background: #474747;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  clear: both;
+  max-width: 1170px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+@media only screen and (min-width: 769px) {
+  .footer-main {
+    background: #333333;  
+  }
+}
+
+@media only screen and (min-width: 569px) {
+  .footer-main {
+    padding: 2em 1.375em;
+  }
+}
+
+@media only screen and (min-width: 569px) {
+  .footer-main {
+    width: 100%;  
+  }
+}
+
+.footer-main a {
+  color: #dedede;
+}
+.footer-main a:hover {
+  text-decoration: underline;
+}
+
+.footer-main .identity {
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  padding: 2em 0 0;
+}
+
+@media only screen and (min-width: 569px) {
+  .footer-main .identity {
+    -webkit-align-items: flex-end;
+    -ms-flex-align: end;
+    align-items: flex-end;
+    -webkit-justify-content: space-between;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    width: 100%;
+  }
+}
+
+.footer-main .links-all {
+  display: none;
+}
+
+@media only screen and (min-width: 569px) {
+  .footer-main .links-all {
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    width: 100%;
+  }
+}
+
+.footer-main .links-all h4 {
+  font-size: 1.125em;
+  font-weight: normal;
+  padding-bottom: 1em;
+}
+
+.footer-main .links-all .flex-item {
+  margin-right: 3em;
+}
+
+.footer-main .links-all .link-sub {
+  display: block;  font-size: 0.75em;
+}
+
+@media only screen and (min-width: 569px) {
+  .footer-main .links-all .link-sub {
+    font-size: 0.75em;
+    font-weight: 300;
+  }
+  .footer-main .links-all .link-sub:not(:last-of-type) {
+    padding-bottom: 1em;
+  }
+}
+
+.footer-main .links-primary {
+  border-top: 1px solid #808285;
+  border-bottom: 1px solid #808285;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  font-size: 0.8125em;
+  margin-top: 2em;
+  padding: 2rem 1.375rem;
+  width: 100%;
+}
+
+@media only screen and (min-width: 569px) {
+  .footer-main .links-primary {
+    border-top: none;
+    border-bottom: none;
+    font-size: 0.875em;
+    margin-top: -22.4px;
+    margin-top: -1.4rem;
+    margin-left: 184px;
+    margin-left: 11.5em;
+    padding: 0;
+    z-index: 3000;  
+  }
+}
+
+.footer-main .links-primary span {
+  display: block;  width: 50%;
+}
+
+.footer-main .links-primary span:not(:last-of-type) {
+  margin-bottom: 1.5em;
+}
+
+@media only screen and (max-width: 1020px) {
+  .footer-main .links-primary {
+    margin-top: 1.5rem;
+    margin-left: 0;
+  }
+
+  .footer-main .links-primary span:first-of-type {
+    padding-left: 0;
+  }
+}
+
+@media only screen and (min-width: 569px) {
+  .footer-main .links-primary span {
+    font-weight: 300;
+    padding-left: 1em;
+    width: auto;
+  }
+
+  .footer-main .links-primary span:not(:last-of-type):after {
+    color: #dedede;
+    content: '|';
+    display: inline-block;
+    margin-left: 1em;
+  }
+}
+
+.footer-main .logo-mit-lib {
+  display: block;
+  fill: #fff;
+  padding-left: 1.375em;
+  width: 10.3125em;
+}
+
+@media only screen and (min-width: 569px) {
+  .footer-main .logo-mit-lib {
+    padding-left: 0;
+    max-width: 9.5em;
+    width: 9.5em;
+  }
+}
+
+.footer-main .logo-mit-lib svg {
+  max-height: 4em;
+  max-width: 9.5em;
+}
+
+.footer-main .text-find-us {
+  color: #ebebeb;
+  display: none;
+  font-size: 0.625em;
+  font-weight: bold;
+  text-transform: uppercase;
+  min-width: 7em;
+}
+
+@media only screen and (min-width: 569px) {
+  .footer-main .text-find-us {
+    display: block;
+  }
+}
+
+.footer-main .social {
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  padding-left: 1.375em;
+  width: auto;
+}
+
+@media only screen and (min-width: 569px) {
+  .footer-main .social {
+    -webkit-flex-wrap: nowrap;
+    -ms-flex-wrap: nowrap;
+    flex-wrap: nowrap;
+    margin-bottom: -0.8em;
+    z-index: 4000;
+  }
+}
+
+.footer-main .social a {
+  width: 33%;
+}
+
+.footer-main .social a:hover {
+  text-decoration: none;
+}
+
+@media only screen and (min-width: 569px) {
+  .footer-main .social a {
+    width: 20%;
+  }
+
+  .footer-main .social a:not(:last-of-type) {
+    margin-right: 0.5em;
+  }
+}
+
+.footer-main .social [class*="icon-social"] {
+  background: #dedede;
+  border-radius: 50%;
+  height: 1.5em;
+  padding: 0.2em;
+  width: 1.5em;
+}
+
+.footer-main .social [class*="icon-social"] path {
+  fill: #474747;
+}
+
+@media only screen and (min-width: 569px) {
+  .footer-main .social [class*="icon-social"] {
+    height: 2em;
+    padding: 0.2em;
+    width: 2em;
+  }
+}
+
+.footer-info-institute {
+  -webkit-align-items: baseline;
+  -ms-flex-align: baseline;
+  align-items: baseline;
+  background: #595959;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  padding: 1.5em 1em;
+  max-width: 1170px;
+  margin: 0 auto;
+}
+
+@media only screen and (min-width: 569px) {
+  .footer-info-institute {
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+  }
+}
+
+.footer-info-institute .about-mit {
+  font-size: 0.625em;
+  margin-bottom: 2em;
+}
+
+@media only screen and (min-width: 569px) {
+  .footer-info-institute .about-mit {
+    margin-bottom: 0;
+  }
+}
+
+.footer-info-institute .about-mit span {
+  color: #eeeeee;
+  text-transform: uppercase;
+}
+
+.footer-info-institute .about-mit span:first-of-type {
+  font-weight: bold;
+}
+
+@media only screen and (min-width: 569px) {
+  .footer-info-institute .about-mit span {
+    color: #ededed;
+  }
+
+  .footer-info-institute .about-mit span:not(:last-of-type):after {
+    content: '|';
+    font-weight: normal;
+  }
+}
+
+.footer-info-institute .license {
+  color: #bbb9b8;
+  font-size: 0.6875em;
+  width: 100%;
+}
+
+.footer-info-institute .license a {
+  color: #ededed;
+}
+
+.footer-info-institute .link-mit-home {
+  display: block;
+}
+
+@media only screen and (min-width: 569px) {
+  .footer-info-institute .link-mit-home {
+    margin: 0 1em 1.5em 0;
+  }
+}
+
+.footer-info-institute .logo-mit {
+  fill: #bbb9b8;
+  width: 3.375em;
+}
+
+.footer-info-institute .logo-mit .color {
+  fill: #ededed;
+}
+
+.no-flexbox .footer-info-institute {
+  display: block;
+}
+
+.no-flexbox .footer-info-institute:after {
+  clear: both;
+  content: '';
+  display: table;
+}
+
+.no-flexbox .footer-info-institute > a,
+.no-flexbox .footer-info-institute > div {
+  float: left;
+}
+
+.no-flexbox .footer-info-institute .about-mit {
+  padding-top: 4em;
+}
+
+.no-flexbox .footer-info-institute .link-mit-home {
+  padding-top: 1.5em;
+}
+
+.no-flexbox .footer-main.flex-container {
+  display: block;
+  float: left;
+}
+
+.no-flexbox .footer-main:after {
+  clear: both;
+  content: '';
+  display: table;
+}
+
+.no-flexbox .footer-main .identity {
+  position: relative;
+  width: 100%;
+}
+
+.no-flexbox .footer-main .identity .logo-mit-lib {
+  display: block;
+  float: left;
+}
+
+.no-flexbox .footer-main .identity .social {
+  bottom: 0;
+  display: block;
+  right: 22px;
+  position: absolute;
+}
+
+.no-flexbox .footer-main .links-primary {
+  display: block;
+  margin-top: 0;
+  margin-left: 0;
+  left: 202px;
+  position: absolute;
+  top: 79px;
+  width: 100%;
+}
+
+.no-flexbox .footer-main .links-primary span {
+  display: block;
+  float: left;
+  position: relative;
+}
+
+.no-flexbox.flexboxlegacy .footer-main {
+  overflow-x: hidden;
+}
+
+.lte-ie9.no-flexbox .footer-main .identity {
+  width: 100%;
+}
+
+/* no-flexbox fallbacks */
+.no-flexbox.no-flexboxlegacy .flex-container > a,
+.no-flexbox.no-flexboxlegacy .flex-container > button,
+.no-flexbox.no-flexboxlegacy .flex-container > div,
+.no-flexbox.no-flexboxlegacy .flex-container > form,
+.no-flexbox.no-flexboxlegacy .flex-container > header,
+.no-flexbox.no-flexboxlegacy .flex-container > h1,
+.no-flexbox.no-flexboxlegacy .flex-container > h2,
+.no-flexbox.no-flexboxlegacy .flex-container > h3,
+.no-flexbox.no-flexboxlegacy .flex-container > input,
+.no-flexbox.no-flexboxlegacy .flex-container > nav,
+.no-flexbox.no-flexboxlegacy .flex-container > span,
+.no-flexbox.no-flexboxlegacy .flex-container > svg,
+.no-flexbox.no-flexboxlegacy .flex-container > ul {
+  float: left;
+  width: auto;
+}
+
+.no-flexbox.no-flexboxlegacy .flex-container:after {
+  clear: both;
+  content: '';
+  display: table;
+}
+
+.no-flexbox.no-flexboxlegacy .flex-item {
+  float: left;
+}
+
+/* Darcy/Remlee edits */
+
+table, th, td {
+    padding: 5px;
+}
+
+#s-lg-guide-description,
+#s-lg-guide-header-search,
+#s-lib-bc,
+#s-lg-guide-header-updated,
+#s-lg-guide-header-url,
+#s-lg-guide-print-url,
+#s-lg-guide-header-subjects,
+#s-lg-guide-header-tags {
+ display:
+ none;
+}
+
+#s-lg-guide-header {
+ margin-top: 15px;
+}
+
+#s-lg-guide-name {
+ font-weight: 400;
+}
+
+.s-lib-box .s-lib-box-title {
+ font-size: 18px;
+ color: #111;
+}
+
+.s-lib-box {
+ color: #111;
+}
+
+.s-lib-box-content {
+ padding: 20px;
+}
+
+/* Hides Email Me button*/
+.s-lib-profile-email > a {
+    display: none;
+}
+
+/*Hides website, Skype, & Social links from profile*/
+.fa-bookmark, .fa-skype, .s-lib-profile-social {
+ display: none;
+}
+
+/* Overriding the accordion markup with changeable arrows */
+.accordion-group .accordion-toggle {
+  margin-left: 0px;
+  background: url('http://libraries.mit.edu/images/libguides-arrow-down.png') no-repeat left center;
+  padding-left: 15px;
+}
+.accordion-group .accordion-toggle.collapsed {
+  background-image: url('http://libraries.mit.edu/images/libguides-arrow-right.png')
+}
+
+/* BartonPlus search box */
+#s-lg-box-3500974-container input {
+  display: inline-block;
+  margin-right: 5px;
+  vertical-align: top;
+}
+#s-lg-box-3500974-container label {
+  font-weight: normal;
+  max-width: 80%;
+  vertical-align: top;
+}
+
+/*Hides guide author, last updated date, and number of views this year from guide lists*/
+.s-lg-system-list .s-lg-guide-list-info {
+ display: none;
+ font-size: 0.9em;
+}
+
+/*Hides "skip to main content" link in top left of banner*/
+a#s-lg-public-skiplink { 
+position:absolute; 
+left:-10000px; 
+top:auto; 
+width:1px; 
+height:1px; 
+overflow:hidden;
+} 
+ 
+a:focus#s-lg-public-skiplink { 
+position:static; 
+width:auto; 
+height:auto; 
+} 
+</style>
