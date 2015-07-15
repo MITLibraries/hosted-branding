@@ -1,3 +1,5 @@
+<link rel="shortcut icon" href="http://libraries.mit.edu/favicon.ico" type="image/vnd.microsoft.icon" />
+
 <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Open+Sans:300,400,400italic,600,600italic,700,700italic">
 
 <!--added by Darcy to confirm w/ Google webmaster tools we own this site-->
@@ -24,6 +26,14 @@ jQuery(document).ready(function($) {
   box-sizing: border-box;
 }
 
+h1#s-lg-guide-name {
+    font-size: 30px;
+}
+
+h3 {
+  font-size: 20px;
+}
+
 body {
   font-family: "Open Sans", Helvetica, sans-serif;
   font-size: 16px; /* was 100%; */
@@ -32,6 +42,18 @@ body {
 }
 
 a {
+  text-decoration: none;
+  color: #338bc5;
+}
+
+.s-lib-box-content .ui-widget {
+    font-family: "Open Sans", Helvetica, sans-serif;
+    font-size: 16px; /* was 100%; */
+    line-height: 1.4;
+    text-rendering: optimizeLegibility;
+}
+
+.ui-widget-content a, a {
   text-decoration: none;
   color: #338bc5;
 }
@@ -1176,8 +1198,7 @@ table, th, td {
 }
 
 #s-lg-guide-name {
- font-size: 28px; 
- font-weight: 300;
+ font-weight: 400;
 }
 
 .s-lib-box .s-lib-box-title {
@@ -1224,4 +1245,26 @@ table, th, td {
   max-width: 80%;
   vertical-align: top;
 }
+
+/*Hides guide author, last updated date, and number of views this year from guide lists*/
+.s-lg-system-list .s-lg-guide-list-info {
+ display: none;
+ font-size: 0.9em;
+}
+
+/*Hides "skip to main content" link in top left of banner*/
+a#s-lg-public-skiplink { 
+position:absolute; 
+left:-10000px; 
+top:auto; 
+width:1px; 
+height:1px; 
+overflow:hidden;
+} 
+ 
+a:focus#s-lg-public-skiplink { 
+position:static; 
+width:auto; 
+height:auto; 
+} 
 </style>
