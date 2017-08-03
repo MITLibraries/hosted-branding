@@ -1,0 +1,4 @@
+/* hide followup ticket creation in ended chat window */
+#s-lch-msg-contact {
+display: none;
+}
