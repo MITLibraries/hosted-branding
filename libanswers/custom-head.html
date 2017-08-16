@@ -1434,28 +1434,19 @@ div#s-la-footer-brand, div#s-la-footer-support-link {
 }
 
 /*Hides the "submit question" button you get when no results are found.*/
-a#s-la-search-showqform {
+a#s-la-search-showqform, 
+.s-srch-askbutton {
     display: none;
 }
 
 /*Hides the "last updated" date on the homepage & in results lists*/
-span.s-la-faq-listing-updated, span.s-la-faq-listing-q-date {
+span.s-la-faq-listing-updated, span.s-la-faq-listing-q-date, .s-srch-result-date {
     display: none;
 }
 
 /*darkens line that separates questions listed on home & results screens*/ 
-li.s-la-faq-listing {
+li.s-la-faq-listing, li.s-srch-result {
    border-bottom: 1px solid #ddd;
-}
-
-/*Makes facet titles on results screen bolder*/
-#s-la-search-sidebar h3 {
-   font-weight: bold;
-}
-
-/*Left aligns title & description*/
-.s-la-public-home.s-la-public-header-text {
-    text-align: left;
 }
 
 /*Makes the breadcrumb background white, so it looks less floaty*/
