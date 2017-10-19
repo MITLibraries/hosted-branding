@@ -8,7 +8,15 @@
 <!--meta tag to scale mobile device display-->
 <meta name="viewport" content="width=device-width, maximum-scale=1">
 
+<!-- Cross-site analytics tracking removal tool -->
+<script type="text/javascript" src="https://libraries.mit.edu/wp-content/plugins/mitlib-analytics/uri.js"></script>
+
 <script type="text/javascript">
+jQuery(window).load(function() {
+  url = URI(window.location.href).removeSearch("_ga");
+  history.replaceState("state", "", url);
+});
+
 jQuery(document).ready(function($) {
   jQuery("img[alt='null'], img[alt='Null'], img[alt='NULL']").attr("alt", "");
   var libchat_efc75c55947db323d4faab725b79307f = { iid:59, key:'fb10446730e271c', width:'240' };
