@@ -76,7 +76,7 @@ html {
 }
 
 body {
-  font-family: "Open Sans", Helvetica, sans-serif;
+  font-family: Helvetica, "Open Sans", sans-serif;
   font-size: 16px; /* was 100%; */
   line-height: 1.4;
   text-rendering: optimizeLegibility;
@@ -84,7 +84,11 @@ body {
 
 a {
   text-decoration: none;
-  color: #338bc5;
+  color: #00F;
+}
+a:hover {
+  color: #09092e;
+  text-decoration: underline;
 }
 
 h3 {
@@ -132,7 +136,7 @@ svg {
 /* 1. Header & Nav */
 .header-main {
   position: relative;
-  background: #333;
+  background: #000 url('https://libraries.mit.edu/images/vi-shape7-tp.png') no-repeat 0 65%;
   clear: both;
   width: 100%
 }
@@ -174,17 +178,17 @@ svg {
 
 .header-main .logo-mit-lib svg {
   max-height: 44px;
-  max-height: 2.75rem;
-  height: auto
-}
-
-.header-main .logo-mit-lib .arch {
-  display: none
+  max-height: 1.75rem;
+  height: auto; 
+  width: 75px;
 }
 
 @media only screen and (min-width:569px) {
-  .header-main .logo-mit-lib .arch {
-    display: block
+  .header-main .logo-mit-lib svg {
+    max-height: 44px;
+    max-height: 2.75rem;
+    height: auto;
+    width: auto;
   }
 }
 
@@ -240,7 +244,7 @@ svg {
 
 .header-main .link-account svg,
 .header-main .link-site-search svg {
-  fill: #c8c8c8;
+  fill: #fff;
   margin: 0 auto;
   padding-bottom: .25em;
   width: 2em
@@ -573,11 +577,7 @@ svg {
 
 @media only screen and (min-width:569px) {
   .nav-main .link-primary {
-    border-right: 1px solid #666;
     width: auto
-  }
-  .nav-main .link-primary:first-child {
-    border-left: 1px solid #666
   }
 }
 
@@ -607,22 +607,20 @@ svg {
 }
 
 .nav-main .main-nav-link.active {
-  background: #d3d3d3;
-  -webkit-box-shadow: 0 0 2px #444, inset 1px 0 0 gray, inset -1px 0 0 gray, inset 0 1px 0 gray;
-  box-shadow: 0 0 2px #444, inset 1px 0 0 gray, inset -1px 0 0 gray, inset 0 1px 0 gray
+  background: #C702C7;
 }
 
 .nav-main .main-nav-link.no-underline:focus,
 .nav-main .main-nav-link.no-underline:hover {
   text-decoration: none;
   color: #fff;
-  background-color: #007db8
+  background-color: #C702C7
 }
 
 @media only screen and (min-width:569px) {
   .nav-main .main-nav-link:focus,
   .nav-main .main-nav-link:hover {
-    background: #338bc5
+    background: #C702C7
   }
 }
 
@@ -631,7 +629,8 @@ svg {
 }
 
 .nav-main .col-2 {
-  background: #f3f3f3
+  border-left: 1px solid #000;
+  background: #fff
 }
 
 .nav-main .links-sub {
@@ -654,7 +653,7 @@ svg {
 
 @media only screen and (min-width:569px) {
   .nav-main .link-primary.open .main-nav-link {
-    background: #338bc5
+    background: #C702C7
   }
 }
 
@@ -668,8 +667,8 @@ svg {
     display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-shadow: 0 0 2px #444;
-    box-shadow: 0 0 2px #444;
+    border: 1px solid #000;
+    border-top: 0;
     max-height: 1000px;
     opacity: 1;
     overflow: visible
@@ -677,7 +676,7 @@ svg {
 }
 
 .nav-main .links-sub a {
-  color: #338bc5;
+  color: #000;
   display: block;
   font-weight: 600;
   padding: .5em
@@ -685,7 +684,9 @@ svg {
 
 .nav-main .links-sub a:focus,
 .nav-main .links-sub a:hover {
-  background: #d9d9d9
+  background: #C702C7;
+  color: #fff;
+  tect-decoration: none;
 }
 
 .nav-main .links-sub [class*=col-] {
@@ -699,7 +700,7 @@ svg {
 }
 
 .nav-main .links-sub .bottom {
-  border-top: 1px solid #dedede
+  border-top: 1px solid #000
 }
 
 .nav-main .links-sub .bottom.extra span:first-of-type:after,
@@ -710,7 +711,7 @@ svg {
 }
 
 .nav-main .bottom:not(.extra) span:not(:first-of-type):before {
-  color: #338bc5;
+  color: #000;
   content: '|';
   display: inline-block;
   margin-right: 4px
@@ -719,7 +720,7 @@ svg {
 .nav-main .heading-col {
   margin: 16px 0 8px 8px;
   margin: 1rem 0 .5rem .5rem;
-  color: #7c7c7d;
+  color: #000;
   display: block;
   font-size: .6em;
   font-weight: 700;
@@ -914,7 +915,7 @@ svg {
 
 /* 2. Footer */
 .footer-main {
-  background: #333;
+  background: #000 url('https://libraries.mit.edu/images/vi-shape7-tp.png') no-repeat 0 65%;
   -webkit-flex-wrap: wrap;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
@@ -935,7 +936,7 @@ svg {
 }
 
 .footer-main a {
-  color: #dedede
+  color: #fff
 }
 
 .footer-main .identity {
@@ -1083,7 +1084,7 @@ svg {
 }
 
 .footer-main .text-find-us {
-  color: #ebebeb;
+  color: #fff;
   display: none;
   font-size: .625em;
   font-weight: 700;
@@ -1137,7 +1138,7 @@ svg {
 }
 
 .footer-main .social [class*=icon-social] {
-  background: #dedede;
+  background: #fff;
   -webkit-border-radius: 50%;
   border-radius: 50%;
   height: 1.5em;
@@ -1146,7 +1147,7 @@ svg {
 }
 
 .footer-main .social [class*=icon-social] path {
-  fill: #474747
+  fill: #000
 }
 
 @media only screen and (min-width:569px) {
@@ -1162,7 +1163,7 @@ svg {
   -webkit-align-items: baseline;
   -ms-flex-align: baseline;
   align-items: baseline;
-  background: #595959;
+  background: #333;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1213,7 +1214,7 @@ svg {
 }
 
 .footer-info-institute .license {
-  color: #bbb9b8;
+  color: #ededed;
   font-size: .6875em;
   width: 100%
 }
