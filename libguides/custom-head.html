@@ -86,12 +86,11 @@ body {
 }
 
 a {
-  text-decoration: none;
-  color: #00F;
+  text-decoration: underline;
+  color: #000;
 }
 a:hover {
-  color: #09092e;
-  text-decoration: underline;
+  color: #00f;
 }
 
 h3 {
@@ -593,7 +592,8 @@ svg {
   padding: 8px;
   padding: .5rem;
   display: block;
-  position: relative
+  position: relative; 
+  text-decoration: none;
 }
 
 @media only screen and (min-width:569px) {
@@ -605,6 +605,7 @@ svg {
     display: -ms-flexbox;
     display: flex;
     height: 100%;
+    text-decoration: none;
     padding-top: 2em
   }
 }
@@ -1324,8 +1325,16 @@ h1#s-lg-guide-name {
     text-rendering: optimizeLegibility;
 }
 
-.ui-widget-content a, a {
+.tabs a {
   text-decoration: none;
+}
+
+.ui-widget-content a {
+  text-decoration: underline;
+  color: #000;
+}
+
+.ui-widget-content a:hover {
   color: #00f;
 }
 

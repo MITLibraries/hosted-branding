@@ -83,12 +83,11 @@ body {
 }
 
 a {
-  text-decoration: none;
-  color: #00F;
+  text-decoration: underline;
+  color: #000;
 }
 a:hover {
-  color: #09092e;
-  text-decoration: underline;
+  color: #00f;
 }
 
 h3 {
@@ -590,7 +589,8 @@ svg {
   padding: 8px;
   padding: .5rem;
   display: block;
-  position: relative
+  position: relative; 
+  text-decoration: none;
 }
 
 @media only screen and (min-width:569px) {
@@ -602,6 +602,7 @@ svg {
     display: -ms-flexbox;
     display: flex;
     height: 100%;
+    text-decoration: none;
     padding-top: 2em
   }
 }
@@ -751,121 +752,7 @@ svg {
   width: 600px
 }
 
-.nav-secondary {
-  border-bottom: 1px solid #dedede;
-  font-size: 16px;
-  font-size: 1rem;
-  margin: 0 20px;
-  z-index: 7000
-}
 
-@media only screen and (max-width:320px) {
-  .nav-secondary {
-    background: #333;
-    height: 0;
-    margin: 0;
-    overflow: hidden;
-    padding: 0
-  }
-  .nav-secondary.active {
-    height: auto;
-    margin: 0;
-    overflow: visible;
-    padding: 0
-  }
-}
-
-.nav-secondary ul {
-  list-style: none
-}
-
-.nav-secondary .menu>ul>li {
-  display: inline-block;
-  position: relative
-}
-
-@media only screen and (max-width:320px) {
-  .nav-secondary .menu>ul>li {
-    display: block
-  }
-}
-
-.nav-secondary .menu>ul>li:nth-child(n+4) ul {
-  right: 0
-}
-
-.nav-secondary .menu>ul>li:hover {
-  background: #dedede;
-  -webkit-box-shadow: 0 0 2px #444;
-  box-shadow: 0 0 2px #444;
-  -webkit-transition: background-color .3s;
-  transition: background-color .3s
-}
-
-@media only screen and (max-width:320px) {
-  .nav-secondary .menu>ul>li:hover {
-    background: 0 0;
-    -webkit-box-shadow: none;
-    box-shadow: none
-  }
-}
-
-.nav-secondary .menu>ul>li:hover li {
-  background: #dedede;
-  border-top: 1px solid #ababab;
-  height: auto;
-  line-height: 1;
-  margin: auto;
-  opacity: 1;
-  overflow: visible;
-  width: 100%;
-  z-index: 7000;
-  -webkit-transition: opacity .3s;
-  transition: opacity .3s
-}
-
-@media only screen and (max-width:320px) {
-  .nav-secondary .menu>ul>li:hover li {
-    display: none
-  }
-}
-
-.nav-secondary .menu>ul>li:hover li a,
-.nav-secondary .menu>ul>li>a {
-  display: block;
-  padding: 16px;
-  padding: 1rem
-}
-
-@media only screen and (max-width:320px) {
-  .nav-secondary .menu>ul>li>a {
-    color: #fff
-  }
-}
-
-.nav-secondary .menu>ul>li li {
-  height: 0;
-  line-height: 0;
-  margin: 0;
-  opacity: 0;
-  overflow: hidden;
-  padding: 0;
-  position: relative;
-  width: 0
-}
-
-.nav-secondary .menu>ul>li ul {
-  -webkit-box-shadow: 0 1px 2px #444;
-  box-shadow: 0 1px 2px #444;
-  position: absolute;
-  width: 320px;
-  width: 20rem
-}
-
-.nav-second>li>a:hover {
-  color: #338bc5!important;
-  text-decoration: underline
-}
 
 .mobile-display {
   display: none

@@ -11,7 +11,7 @@
 <script type="text/javascript">
 jQuery(document).ready(function($) {
   jQuery("img[alt='null'], img[alt='Null'], img[alt='NULL']").attr("alt", "");
-
+  var libchat_efc75c55947db323d4faab725b79307f = { iid:59, key:'fb10446730e271c', width:'240' };
 
   $('header .menu--toggle').click(function(){
     $('#nav-main').toggleClass('active');
@@ -85,14 +85,16 @@ body {
   text-rendering: optimizeLegibility;
 }
 
-a, a i {
+a {
   text-decoration: underline;
   color: #000;
 }
-
-a:hover, 
-a:hover i {
+a:hover {
   color: #00f;
+}
+
+h3 {
+  font-size: 20px;
 }
 
 svg {
@@ -1264,7 +1266,7 @@ svg {
 
 /* Local overrides */
 
-/* layout adjustments especially for libanswers */
+/* layout adjustments especially for libguides */
 @media only screen and (min-width: 1024px) {
   .header-main .name-site {
     width: 100%;
@@ -1292,7 +1294,6 @@ svg {
 
 /* reset only what you need */
 .header-main h2 {
-  line-height: normal;
   margin: 0;
   padding: 0;
   border: 0;
@@ -1313,7 +1314,18 @@ svg {
   list-style-type: none;
 }
 
-.tabs a {
+h1#s-lg-guide-name {
+    font-size: 30px;
+}
+
+.s-lib-box-content .ui-widget {
+    font-family: Helvetica, "Open Sans", sans-serif;
+    font-size: 16px; /* was 100%; */
+    line-height: 1.4;
+    text-rendering: optimizeLegibility;
+}
+
+.ui-widget-content a, a {
   text-decoration: none;
 }
 
@@ -1326,36 +1338,150 @@ svg {
   color: #00f;
 }
 
-/*Hides the Springshare footer info & "report a tech support issue"*/
-div#s-la-footer-brand, div#s-la-footer-support-link {
+table, th, td {
+    padding: 5px;
+}
+
+#s-lg-guide-description,
+#s-lg-guide-header-search,
+#s-lib-bc,
+#s-lg-guide-header-updated,
+#s-lg-guide-header-url,
+#s-lg-guide-print-url,
+#s-lg-guide-header-subjects,
+#s-lg-guide-header-tags {
+ display:
+ none;
+}
+
+#s-lg-guide-header {
+ margin-top: 15px;
+}
+
+#s-lg-guide-name {
+ font-weight: 400;
+}
+
+.s-lib-box .s-lib-box-title {
+ font-size: 18px;
+ color: #111;
+}
+
+.s-lib-box {
+ color: #111;
+}
+
+.s-lib-box-content {
+ padding: 20px;
+}
+
+/* Hides Email Me button*/
+.s-lib-profile-email > a {
     display: none;
 }
 
-/*Hides the "submit question" button you get when no results are found.*/
-a#s-la-search-showqform, 
-.s-srch-askbutton {
-    display: none;
+/*Hides website, Skype, & Social links from profile*/
+.fa-bookmark, .fa-skype, .s-lib-profile-social {
+ display: none;
 }
 
-/*Hides the "last updated" date on the homepage & in results lists*/
-span.s-la-faq-listing-updated, span.s-la-faq-listing-q-date, .s-srch-result-date {
-    display: none;
+/* Overriding the accordion markup with changeable arrows */
+.accordion-group .accordion-toggle {
+  margin-left: 0px;
+  background: url('https://libraries.mit.edu/images/libguides-arrow-down.png') no-repeat left center;
+  padding-left: 15px;
+}
+.accordion-group .accordion-toggle.collapsed {
+  background-image: url('https://libraries.mit.edu/images/libguides-arrow-right.png')
 }
 
-/*darkens line that separates questions listed on home & results screens*/ 
-li.s-la-faq-listing, li.s-srch-result {
-   border-bottom: 1px solid #ddd;
+/* BartonPlus search box */
+#s-lg-box-3500974-container input {
+  display: inline-block;
+  margin-right: 5px;
+  vertical-align: top;
+}
+#s-lg-box-3500974-container label {
+  font-weight: normal;
+  max-width: 80%;
+  vertical-align: top;
 }
 
-/*Makes the breadcrumb background white, so it looks less floaty*/
-ol.breadcrumb.s-la-color-bars.s-la-color-bars-border {
-    background-image: none;
-    background-color: white;
+/*Hides guide author, last updated date, and number of views this year from guide lists*/
+.s-lg-system-list .s-lg-guide-list-info {
+ display: none;
+ font-size: 0.9em;
 }
 
-/*Tweaks horizontal alignment in the search bar ("Browse" wasn't lined up with the "All" or "Topics")*/
-.navbar-nav > li > a {
-line-height: inherit;
+/*Hides "skip to main content" link in top left of banner*/
+a#s-lg-public-skiplink { 
+position:absolute; 
+left:-10000px; 
+top:auto; 
+width:1px; 
+height:1px; 
+overflow:hidden;
+} 
+ 
+a:focus#s-lg-public-skiplink { 
+position:static; 
+width:auto; 
+height:auto; 
+} 
+
+/* staff contact card styles */
+.contact-card .wrap-contact-image {
+  display: inline-block; 
+  vertical-align: middle; 
+  margin-right: 15px;
+}
+
+.contact-card .wrap-contact-info {
+  display: inline-block; 
+  vertical-align: middle;
+}
+
+.contact-card .wrap-contact-help {
+  display: block;
+}
+
+/* customize browzine widget */
+#browzineWidget .smallWidget {
+  width: auto !important;
+  float: none !important;
+  background-size: contain !important;
+}
+
+#browzineWidget .smallWidget .widgetText {
+  width: auto !important;
+  float: none !important;
+  padding: 10px;
+}
+
+#browzineWidget .widgetText .intro {
+  text-align: center !important;
+}
+
+
+/* override libwizard styles */
+#logo {
+  margin-bottom: 2%;
+  background-color: #000 !important;
+  padding: 0;
+}
+
+#logo .header-main {
+  font-size: 16px;
+  text-align: initial;
+}
+
+#header-text {
+  max-width: 1140px;
+}
+
+#canvas-container {
+  max-width: 1140px;
+  margin: 0 auto;
 }
 
 </style>
