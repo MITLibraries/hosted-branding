@@ -1,6 +1,6 @@
-<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,400italic,600,600italic,700,700italic">
-
 <link rel="shortcut icon" href="https://libraries.mit.edu/favicon.ico" type="image/vnd.microsoft.icon" />
+
+<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,400italic,600,600italic,700,700italic">
 
 <!--added by Darcy to confirm w/ Google webmaster tools we own this site-->
 <meta name="google-site-verification" content="82Cv3HFWvcefC_9XauvglcfB4h3o0uuiC3nKWWkL_eE" />
@@ -79,7 +79,7 @@ html {
 }
 
 body {
-  font-family: "Open Sans", Helvetica, sans-serif;
+  font-family: Helvetica, "Open Sans", sans-serif;
   font-size: 16px; /* was 100%; */
   line-height: 1.4;
   text-rendering: optimizeLegibility;
@@ -590,7 +590,8 @@ svg {
   padding: 8px;
   padding: .5rem;
   display: block;
-  position: relative
+  position: relative; 
+  text-decoration: none;
 }
 
 @media only screen and (min-width:569px) {
@@ -602,6 +603,7 @@ svg {
     display: -ms-flexbox;
     display: flex;
     height: 100%;
+    text-decoration: none;
     padding-top: 2em
   }
 }
@@ -750,6 +752,8 @@ svg {
   padding: 1rem;
   width: 600px
 }
+
+
 
 .mobile-display {
   display: none
@@ -1309,6 +1313,18 @@ svg {
   list-style-type: none;
 }
 
+.tabs a {
+  text-decoration: none;
+}
+
+.ui-widget-content a {
+  text-decoration: underline;
+  color: #000;
+}
+
+.ui-widget-content a:hover {
+  color: #00f;
+}
 
 /*Hides the Springshare footer info & "report a tech support issue"*/
 div#s-la-footer-brand, div#s-la-footer-support-link {
