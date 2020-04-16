@@ -1,0 +1,333 @@
+/* 
+    custom.css
+    Any site-specific CSS customization should be added to this file.
+    This file overrides the defaults in aeon.css, which should not be altered.
+
+    There are three areas of this stylesheet:
+    1 - tag styles
+    2 - bespoke classes
+    3 - classes for specific regions (headers, footers, etc)
+*/
+
+/* 1 - Tag styles */
+body {
+  font-family: 'Helvetica Neue', Helvetica, Arial, "Open Sans", sans-serif;
+}
+
+h1,h2,h3,h4,h5,h6 {
+  font-family: 'Helvetica Neue', Helvetica, Arial, "Open Sans", sans-serif;
+  color: black;
+}
+
+h1 {
+  text-align: left;
+}
+
+p {
+  color: black;
+}
+
+ul {
+  color: black;
+}
+
+a {
+  color: black;
+  text-decoration: underline;
+}
+
+a:hover, a:focus {
+  background: none;
+  color: blue;
+  text-decoration: none;
+}
+
+h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
+  color: #1a1a83;
+}
+
+/* 2 - Bespoke classes (generally alphabetical order) */
+
+.alert {
+  border-radius: 0;
+}
+
+.alerts-bar{
+  background-color: #fafafa;
+}
+
+.btn-alert{
+  color: #d50606;
+}
+
+/* .btn-link class has been added to link tag styles above */
+.btn-link {
+  color: #1a1a83;
+  text-decoration: none;
+}
+
+.btn-link:hover,
+.btn-link:focus {
+  color: blue;
+  text-decoration: underline;
+}
+
+.btn-primary {
+  background-color: #1a1a83;
+  color: white;
+  text-decoration: none;
+}
+
+.btn-primary:hover,
+.btn-primary:focus {
+  background-color: blue;
+  text-decoration: underline;
+  color: white;
+}
+
+.btn-primary:disabled {
+  background-color: #dedede;
+  text-decoration: none;
+  color: #333;
+  cursor: not-allowed;
+}
+
+.btn-primary a {
+  color: inherit;
+  text-decoration: inherit;
+}
+
+.btn-secondary {
+  background-color: #595959 ;
+  color: white;
+}
+
+.btn-secondary a {
+  color: white;
+}
+
+.btn-secondary a:hover,
+.btn-secondary a:focus {
+  background: none;
+}
+
+.card {
+  margin-bottom: 1rem;
+}
+
+.req {
+  color: red;
+}
+
+.small-notes {
+  color: black;
+}
+
+.sr {
+  border: 0 none;
+  clip: rect(1px,1px,1px,1px);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+  word-wrap: normal;
+}
+
+.statusError {
+  background: none;
+  border: 1px solid #d50606;
+  border-top: 5px solid #d50606;
+  color: #000;
+}
+
+.statusNormal {
+  background: none;
+  border: 1px solid #008700;
+  border-top: 3px solid #008700;
+  color: black;
+}
+
+.statusInformation {
+  background: none;
+  border: 1px solid #04a6cf;
+  border-top: 3px solid #04a6cf;
+  color: black;
+}
+
+.statusSubmittal {
+  display: block;
+  margin-bottom: 2rem;
+  border-radius: 2px;
+  padding: 1.6rem 2rem;
+  border: 1px solid #000;
+  border-top: 5px solid #000;
+  color: #000;
+  font-weight: 600;
+}
+
+.text-muted {
+  color: black !important;
+}
+
+.badge-primary{
+  background-color:rgb(26, 26, 131);
+}
+
+.vl {
+  border-left: 2px solid black;
+  height: 170px;
+}
+
+.logon-field {
+  display: inline-block;
+}
+
+.logon-field form-group col-md-4{
+margin: 0px;
+}
+
+/* 3 - Page regions and associated styles */
+header { 
+  background-image: 
+  url("data:image/svg+xml;utf8,<?xml version='1.0' encoding='UTF-8' standalone='no'?><svg xmlns:dc='http://purl.org/dc/elements/1.1/' xmlns:cc='http://creativecommons.org/ns%23' xmlns:rdf='http://www.w3.org/1999/02/22-rdf-syntax-ns%23' xmlns:svg='http://www.w3.org/2000/svg' xmlns='http://www.w3.org/2000/svg' style='font-style:normal;font-weight:normal;font-size:12px;font-family:Dialog;color-interpolation:auto;fill-opacity:1;stroke:%23000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:10;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto' version='1.1' id='svg3713' xml:space='preserve' width='1000' height='714.53802' viewBox='0 0 1000 714.53803'><metadata id='metadata3987'><rdf:RDF><cc:Work rdf:about=''><dc:format>image/svg+xml</dc:format><dc:type rdf:resource='http://purl.org/dc/dcmitype/StillImage' /><dc:title></dc:title></cc:Work></rdf:RDF></metadata><defs id='defs3985' /><g id='g3721' transform='matrix(2.4689266,0,0,-2.3276836,-173.72881,1022.4476)'><g transform='matrix(1.1039216,0,0,1.087573,-19.175696,-38.355544)' id='g3723' /><path id='path3737' style='fill:none;stroke:%23bfbfbf;stroke-width:0.5;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1' d='M 120.11713,438.83885 386.53756,310.34211' /><path id='path3739' style='fill:none;stroke:%23bfbfbf;stroke-width:0.5;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1' d='M 120.11713,438.83885 70.782874,302.71822' /><path id='path3741' style='fill:none;stroke:%23bfbfbf;stroke-width:0.5;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1' d='M 120.11713,438.83885 234.37301,132.69794' /><path id='path3743' style='fill:none;stroke:%23bfbfbf;stroke-width:0.5;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1' d='M 120.11713,438.83885 444.27266,388.33197' /><path id='path3745' style='fill:none;stroke:%23bfbfbf;stroke-width:0.5;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1' d='M 120.11713,438.83885 474.98376,166.29306' /><path id='path3747' style='fill:none;stroke:%23bfbfbf;stroke-width:0.5;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1' d='M 386.53756,310.34211 70.782874,302.71822' /><path id='path3749' style='fill:none;stroke:%23bfbfbf;stroke-width:0.5;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1' d='M 386.53756,310.34211 234.37301,132.69794' /><path id='path3751' style='fill:none;stroke:%23bfbfbf;stroke-width:0.5;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1' d='m 386.53756,310.34211 57.7351,77.98986' /><path id='path3753' style='fill:none;stroke:%23bfbfbf;stroke-width:0.5;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1' d='m 386.53756,310.34211 88.4462,-144.04905' /><path id='path3755' style='fill:none;stroke:%23bfbfbf;stroke-width:0.5;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1' d='M 70.782874,302.71822 234.37301,132.69794' /><path id='path3757' style='fill:none;stroke:%23bfbfbf;stroke-width:0.5;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1' d='M 70.782874,302.71822 444.27266,388.33197' /><path id='path3759' style='fill:none;stroke:%23bfbfbf;stroke-width:0.5;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1' d='M 70.782874,302.71822 474.98376,166.29306' /><path id='path3761' style='fill:none;stroke:%23bfbfbf;stroke-width:0.5;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1' d='M 234.37301,132.69794 444.27266,388.33197' /><path id='path3763' style='fill:none;stroke:%23bfbfbf;stroke-width:0.5;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1' d='m 234.37301,132.69794 240.61075,33.59512' /><path id='path3765' style='fill:none;stroke:%23bfbfbf;stroke-width:0.5;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1' d='m 444.27266,388.33197 30.7111,-222.03891' /></g></svg>");
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+h1 .container a {
+  border-right: 2px solid black;
+  display: table-cell;
+  padding-right: 2rem;
+  vertical-align: middle;
+}
+
+h1 .container .title {
+  display: table-cell;
+  font-size: 40px;
+  padding-left: 2rem;
+  vertical-align: middle;
+}
+
+.main-navbar {
+  background-color: black;
+}
+
+.navbar-dark .navbar-nav .nav-link, 
+.navbar-dark .navbar-nav .nav-link {
+  background: none;
+  color: white;
+}
+.navbar-dark .navbar-nav .nav-link:focus, 
+.navbar-dark .navbar-nav .nav-link:hover {
+  color: white; 
+}
+
+footer.foot {
+  background-color: #fff;
+  border-top: 1px solid #000;
+  font-size: 1rem;
+  color: #000;
+  padding: 1rem;
+  margin-top: 6rem;
+  margin-bottom: 6rem;
+}
+.wrap-outer-footer-institute a {
+  color: #fff;
+}
+.wrap-outer-footer-institute .link-logo-mit {
+  display: block;
+  margin-bottom: 1rem;
+}
+
+.wrap-outer-footer-institute .link-logo-mit .logo-mit {
+  fill: #000;
+}
+
+.wrap-outer-footer-institute .link-logo-mit .logo-mit .color {
+  fill: #333;
+}
+
+.wrap-outer-footer-institute .about-mit {
+  color: #000;
+  text-transform: uppercase;
+  line-height: 1rem;
+}
+
+.wrap-outer-footer-institute .about-mit {
+  padding-left: 0;
+}
+
+.wrap-outer-footer-institute .about-mit li,
+.wrap-outer-footer-institute .about-mit .item {
+  display: inline-block;
+  padding-right: 1rem;
+}
+
+.wrap-outer-footer-institute .about-mit .item:after {
+  content: ' | ';
+  margin-left: 1rem;
+}
+
+.wrap-outer-footer-institute .about-mit .item:last-child:after {
+  content: '';
+}
+
+/* End of page region styles */
+
+.img-fluid{
+  width: 100% \9;
+}
+
+button[name="switchButton"]{
+  float: right;
+  background-color: #1a1a83;
+  color: #fff;
+}
+
+button[name="switchButton"]:hover{
+  background-color: blue;
+}
+
+button[name="secondSwitchButton"]{
+  float: right;
+  background-color: #1a1a83;
+  color: #fff;
+}
+
+button[name="secondSwitchButton"]:hover{
+  background-color: blue;
+}
+
+.searchButtons {
+  transform: scale(1);
+  height: 10px;
+  width: 25px;
+}
+
+input[type="checkbox"], input[type="radio"] {
+  transform: scale(2);
+}
+
+.custom-checkbox{
+  padding-left: 42px;
+}
+
+.pub-note{
+  padding-left: 15px;
+}
+
+.checkbox-small-notes{
+  padding-left: 16px;
+  color: #000;
+}
+
+.card-title{
+ color: #1a1a83;
+}
+
+.table-data-row-details {
+  bottom: 12px;
+  padding-left: 25px;
+}
