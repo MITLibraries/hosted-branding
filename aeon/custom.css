@@ -224,55 +224,110 @@ h1 .container .title {
   color: white; 
 }
 
+/* Footer styles */
 footer.foot {
   background-color: #fff;
   border-top: 1px solid #000;
-  font-size: 1rem;
+  font-size: 10px;
   color: #000;
   padding: 1rem;
   margin-top: 6rem;
   margin-bottom: 6rem;
 }
+.wrap-outer-footer-institute {
+  font-size: 14px;
+}
 .wrap-outer-footer-institute a {
-  color: #fff;
+  color: #000;
 }
 .wrap-outer-footer-institute .link-logo-mit {
-  display: block;
-  margin-bottom: 1rem;
+  margin-bottom: 16px;
+  margin-right: 1rem;
 }
-
 .wrap-outer-footer-institute .link-logo-mit .logo-mit {
   fill: #000;
 }
-
 .wrap-outer-footer-institute .link-logo-mit .logo-mit .color {
   fill: #333;
 }
-
 .wrap-outer-footer-institute .about-mit {
   color: #000;
   text-transform: uppercase;
   line-height: 1rem;
-}
-
-.wrap-outer-footer-institute .about-mit {
-  padding-left: 0;
+  margin-bottom: 16px;
+  margin-right: 1rem;
+  white-space: nowrap;
 }
 
 .wrap-outer-footer-institute .about-mit li,
 .wrap-outer-footer-institute .about-mit .item {
   display: inline-block;
-  padding-right: 1rem;
 }
 
-.wrap-outer-footer-institute .about-mit .item:after {
+/* Policies menu */
+.wrap-policies {
+  margin-bottom: 16px;
+}
+.wrap-policies .item {
+  display: inline-block;
+  padding-right: 1rem;
+}
+.wrap-policies .item:after {
   content: ' | ';
   margin-left: 1rem;
 }
-
-.wrap-outer-footer-institute .about-mit .item:last-child:after {
-  content: '';
+.wrap-policies .item:last-child {
+  padding-right: 0;
 }
+.wrap-policies .item:last-child:after {
+  content: inherit;
+}
+
+/* License statement */
+footer .license {
+  font-size: 12px;
+}
+
+/* Responsive implementation of footer */
+.footer-info-institute {
+  align-items: baseline;
+  display: flex;
+  flex-direction: column;
+}
+@media (min-width: 576px) {
+  .footer-info-institute {
+  }
+}
+@media (min-width: 768px) {
+  .footer-info-institute {
+  }
+}
+@media (min-width: 992px) {
+  .footer-info-institute {
+    flex-direction: row;
+    align-items: flex-end;
+    margin-bottom: 16px;
+  }
+  .wrap-outer-footer-institute .link-logo-mit {
+    margin-bottom: 0;
+  }
+  .wrap-outer-footer-institute .about-mit {
+    margin-bottom: 0;
+  }
+  .wrap-policies {
+    margin-bottom: 0;
+    margin-left: auto;
+    text-align: right;
+  }
+  .license {
+    text-align: right;
+  }
+}
+@media (min-width: 1200px) {
+  .footer-info-institute {
+  }
+}
+/* End of footer styles */
 
 /* End of page region styles */
 
