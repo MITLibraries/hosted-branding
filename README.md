@@ -1,9 +1,10 @@
-Libguides (and Aeon) branding
-=============================
+Hosted Platforms Branding
+=========================
 
 This code determines the theming for MIT Libraries' hosted platforms from
-Springshare and Aeon:
+Springshare, Lyrasis, and Aeon:
 
+- https://archivesspace.mit.edu
 - https://libguides.mit.edu
 - https://libcal.mit.edu
 - https://libanswers.mit.edu
@@ -20,8 +21,9 @@ each platform, there are usually three files:
    page.
 
 "Deploying" these files is a manual process: copying and pasting their
-contents into Springshare's administrative web interface. For Aeon, the files
-must be emailed to staff at Atlas for placing on their servers.
+contents into Springshare's administrative web interface. For Aeon and
+ArchivesSpace, the files must be emailed to staff at Atlas and Lyrasis
+respectively for placing on their servers.
 
 ## Related resources
 

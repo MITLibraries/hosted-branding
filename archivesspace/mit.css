@@ -1,0 +1,9 @@
+a { color: #337AB7; } 
+h1 { font-size: 1.75em; }
+#footer_links a:link { color:#FFF; text-decoration:none; font-weight:normal; }
+#footer_links a:visited { color: #FFF; text-decoration:none; font-weight:normal; }
+#footer_links a:hover { color: #FFF; text-decoration:underline; font-weight:normal; }
+#footer_links a:active { color: #FFF; text-decoration:none; font-weight:normal; }
+#footer_links { color: #FFF; text-decoration:none; font-weight:normal; }
+
+
