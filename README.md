@@ -22,7 +22,15 @@ each platform, there are usually three files:
    page.
 
 "Deploying" these files is a manual process. For Springshare platforms, the
-files must be copied and pasted into the platform's Look and Feel interface.
+files must be copied and pasted into the platform's 'Look & Feel' interface.
+To access the 'Look & Feel' interface, first [log in to LibApps](https://mit.libapps.com/libapps/login.php).
+There is often a 'Look & Feel' link in the 'Admin' menu, but it some cases
+you'll have to navigate to the 'System Settings' dashboard first.
+
+The 'Look & Feel' interface in LibApps has separate `textarea`
+elements in which you can paste the `header`, `footer`, and `head` code.
+Note that the corresponding box for `head` is usually labelled 'Custom JS/CSS'.
+
 For Aeon and ArchivesSpace, the files must be emailed to staff at Atlas and
 Lyrasis respectively for placing on their servers.
 
