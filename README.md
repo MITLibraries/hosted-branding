@@ -31,6 +31,11 @@ The 'Look & Feel' interface in LibApps has separate `textarea`
 elements in which you can paste the `header`, `footer`, and `head` code.
 Note that the corresponding box for `head` is usually labelled 'Custom JS/CSS'.
 
+The LibGuides directory also includes `custom-analytics.html`, which can be found in the 'Custom Analytics' tab of
+'System Settings'. This is currently Google Analytics tracking code, which we are running alongside Matomo (in
+`custom-head.html`) for QA purposes. Once we are satisfied that the Matomo data replicates our GA data, we will remove
+the GA code and move the Matomo code to `Custom Analytics`.
+
 For Aeon and ArchivesSpace, the files must be emailed to staff at Atlas and
 Lyrasis respectively for placing on their servers.
 
