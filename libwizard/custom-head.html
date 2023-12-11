@@ -1,4 +1,8 @@
-<link rel="shortcut icon" href="https://libraries.mit.edu/favicon.ico" type="image/vnd.microsoft.icon" />
+<!-- load favicons for miscellaneous platforms -->
+<link rel="icon" href="https://cdn.libraries.mit.edu/files/branding/favicons/favicon.ico" sizes="32x32">
+<link rel="icon" href="https://cdn.libraries.mit.edu/files/branding/favicons/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="https://cdn.libraries.mit.edu/files/branding/favicons/apple-touch-icon.png"><!-- 180×180 -->
+<link rel="manifest" href="https://cdn.libraries.mit.edu/files/branding/favicons/manifest.json">
 
 <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,400italic,600,600italic,700,700italic">
 
@@ -76,383 +80,674 @@ h3 {
   position: relative;
   background: #000 url('https://libraries.mit.edu/images/vi-shape7-tp.png') no-repeat 0 65%;
   clear: both;
-  width: 100%
-}
-
-.header-main svg {
-  max-width: 100%;
-  max-height: 100%;
-}
-
-.header-main {
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
-  padding: 0 1em
   width: 100%;
 }
-
-.header-main>[class*=link] {
-  color: #fff;
-  -webkit-box-ordinal-group: 401;
-  -webkit-order: 400;
-  -ms-flex-order: 400;
-  order: 400;
-  text-transform: uppercase
-}
-
-@media only screen and (max-width:568px) {
-  .header-main>[class*=link] {
-    font-size: .4375em
+@media only screen and (min-width: 569px) {
+  .header-main {
+    width: 100%;
   }
 }
-
-.header-main .logo-mit-lib,
-.headder-main .link-logo-mit {
-  fill: #fff
+@media only screen and (min-width: 569px) {
+  .header-main {
+    justify-content: space-between;
+    padding: 0 1em;
+  }
 }
-
-.header-main .logo-mit-lib svg,
-.header-main .link-logo-mit svg {
-  max-height: 44px;
+.header-main .name-site {
+  order: 2;
+  min-width: 77px;
+  min-width: 4.8125rem;
+  padding-bottom: 6.4px;
+  padding-bottom: 0.4rem;
+  font-size: 14.4px;
+  font-size: 0.9rem;
+  line-height: 1;
+}
+@media only screen and (min-width: 569px) {
+  .header-main .name-site {
+    max-width: 104px;
+    max-width: 6.5rem;
+    margin-left: 1.5%;
+    padding: 0;
+  }
+}
+.header-main .name-site a {
+  display: block;
+  width: auto;
+}
+.header-main .logo-mit-lib {
+  fill: #fff;
+  padding: 8px;
+}
+.header-main .logo-mit-lib svg {
+  max-height: 28px;
   max-height: 1.75rem;
-  height: auto; 
+  height: auto;
   width: 75px;
 }
-
-@media only screen and (min-width:569px) {
+@media only screen and (min-width: 569px) {
   .header-main .logo-mit-lib svg {
     max-height: 44px;
     max-height: 2.75rem;
-    height: auto;
-    width: auto;
+    width: 120px;
   }
 }
-
-@media only screen and (min-width:569px) {
-  .header-main .link-logo-mit {
-    margin-left: 2rem;
-  }
+.header-main .logo-mit-lib title {
+  color: #000;
+  background-color: #fff;
 }
-
-.header-main .link-logo-mit {
-  max-width: 59px;
-  max-width: 59px;
-  max-width: 3.6875rem;
-  -webkit-align-self: flex-end;
-  -ms-flex-item-align: end;
+.header-main .logo-mit-lib:hover {
+  background-color: #c702c7;
+}
+.header-main .logo-mit-lib:focus {
+  background-color: #c702c7;
+}
+.header-main .link-account,
+.header-main .link-site-search,
+.header-main .link-contact {
   align-self: flex-end;
   display: flex;
-  -webkit-box-ordinal-group: 5;
-  -webkit-order: 4;
-  -ms-flex-order: 4;
-  order: 4;
-  margin-bottom: 8px;
-  margin-bottom: .5rem;
+  flex-direction: column;
+  order: 1000;
+  padding: 6.4px;
+  padding: 0.4rem;
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 0.75rem;
 }
-
+.header-main .link-account:hover,
+.header-main .link-account:focus,
+.header-main .link-site-search:hover,
+.header-main .link-site-search:focus,
+.header-main .link-contact:hover,
+.header-main .link-contact:focus {
+  background-color: #c702c7;
+}
+.header-main .link-account svg,
+.header-main .link-site-search svg,
+.header-main .link-contact svg {
+  fill: #c8c8c8;
+  margin: 0 auto;
+  padding-bottom: 0.25em;
+  width: 2em;
+}
+.header-main .link-account i,
+.header-main .link-site-search i,
+.header-main .link-contact i {
+  color: #c8c8c8;
+  text-align: center;
+  font-size: 14px;
+}
+@media only screen and (min-width: 569px) {
+  .header-main .link-account,
+  .header-main .link-site-search,
+  .header-main .link-contact {
+    display: none;
+  }
+}
+.header-main .link-site-search {
+  margin-left: auto;
+}
+.header-main .link-account {
+  margin-left: 0.6rem;
+  margin-right: 0.6rem;
+}
+.header-main .link-contact {
+  margin-right: auto;
+}
+.header-main .link-logo-mit {
+  display: none;
+  align-self: flex-end;
+  order: 4;
+  padding-top: 32px;
+  padding-top: 2rem;
+  padding-bottom: 8px;
+  padding-bottom: 0.5rem;
+  padding-left: 0.5em;
+  padding-right: 0.5em;
+  max-width: 74px;
+  max-width: 73.6px;
+  max-width: 4.6rem;
+}
+@media only screen and (min-width: 569px) {
+  .header-main .link-logo-mit {
+    display: block;
+  }
+}
+.header-main .link-logo-mit:hover {
+  background-color: #c702c7;
+}
+.header-main .link-logo-mit:focus {
+  background-color: #c702c7;
+}
 .header-main .logo-mit {
+  display: block;
   height: auto;
   max-height: 45px;
   max-height: 2.8125rem;
-  fill: #b9b7b6
+  fill: #b9b7b6;
 }
 .header-main .logo-mit .color {
-  fill: #fff
+  fill: #fff;
 }
-
-.header-main .name-site {
-  font-size: 14.4px;
-  font-size: .9rem;
-  line-height: 1;
-  margin-top: 1.25em;
-  margin-left: .25em;
-  -webkit-box-ordinal-group: 3;
-  -webkit-order: 2;
-  -ms-flex-order: 2;
-  order: 2;
-  padding-bottom: 8px;
-  padding-bottom: .5rem;
-  min-width: 77px;
-  min-width: 4.8125rem
-}
-
-@media only screen and (min-width:569px) {
-  .header-main .name-site {
-    margin-top: 0;
-    margin-bottom: 8px;
-    margin-bottom: .5rem;
-    margin-left: 43px;
-    margin-left: 2.6875rem;
-    padding-top: .5em;
-    padding-bottom: 0;
-    max-width: 6.4375em
-  }
-}
-
-@media only screen and (max-width:1023px) {
-  .header-main .name-site {
-    margin-left: 16px;
-    margin-left: 1rem;
-    padding-right: .5em
-  }
-}
-
-@media only screen and (min-width:1024px) {
-  .header-main .name-site {
-    font-size: 16px;
-    font-size: 1rem
-  }
-}
-
-@media only screen and (max-width:768px) {
-  .header-main .name-site {
-    font-size: 12px;
-    font-size: .75rem;
-    margin-left: -.25em
-  }
-}
-
-.header-main .name-site a {
-  display: block;
-  width: auto
-}
-
 #skip a {
   position: absolute;
   left: -10000px;
   top: auto;
   width: 1px;
   height: 1px;
-  overflow: hidden
+  overflow: hidden;
+  background: #fff;
+  color: blue;
+  display: block;
+  padding: 10px;
 }
-
 #skip a:focus {
   position: static;
   width: auto;
-  height: auto
+  height: auto;
 }
-
-@media only screen and (max-width:320px) {
+@media only screen and (max-width: 320px) {
   .no-flexbox.flexboxlegacy .header-main .icon-account,
   .no-flexbox.flexboxlegacy .header-main .icon-search {
     max-height: 16px;
     max-height: 1rem;
     max-width: 16px;
-    max-width: 1rem
+    max-width: 1rem;
   }
 }
-
-@media only screen and (max-width:320px) {
-  .no-flexbox.flexboxlegacy .header-main svg {
+@media only screen and (max-width: 320px) {
+  .no-flexbox.flexboxlegacy .header-main .menu--toggle svg {
     height: 100%;
     padding: 1em;
-    width: auto
+    width: auto;
   }
 }
-
-.lte-ie9 .header-main,
+.lte-ie9 .header-main {
+  height: 62px;
+  overflow: hidden;
+}
 .lte-ie9 .header-main * {
   height: 62px;
-  overflow: hidden
+  overflow: hidden;
 }
-
 .lte-ie9 .header-main .name-site {
   margin-left: 32px;
-  max-width: 103px
+  max-width: 103px;
 }
-
 .lte-ie9 .header-main .logo-mit {
   margin-top: 24px;
-  margin-left: 40px
+  margin-left: 40px;
 }
-
 .lte-ie9 .header-main .small {
   font-size: 10px;
-  font-size: .625rem;
+  font-size: 0.625rem;
   padding-top: 26px;
-  padding-top: 1.625rem
+  padding-top: 1.625rem;
 }
-
 .lte-ie9 .header-main .small svg {
-  display: none
+  display: none;
 }
-
+body.user-is-tabbing *.nav-main .main-nav-link.no-underline:focus {
+  text-decoration: none;
+  color: #fff;
+  background-color: #c702c7;
+}
+@media only screen and (min-width: 569px) {
+  body.user-is-tabbing *.nav-main .main-nav-link:focus {
+    background: #c702c7;
+  }
+}
+.nav-main {
+  flex-wrap: wrap;
+  transform: translateY(-1000%);
+  z-index: 7000;
+  margin: 0;
+  padding: 0;
+  width: 0;
+  height: 0;
+  overflow: hidden;
+}
 .nav-main.active {
   font-size: 16px;
   font-size: 1rem;
-  padding: 0 8px 8px;
-  padding: 0 .5rem .5rem;
+  padding: 0px 8px 8px 8px;
+  padding: 0rem 0.5rem 0.5rem 0.5rem;
+  background: white;
+  box-shadow: 0 3px 3px #ccc;
   height: auto;
-  -webkit-box-flex: 0;
-  -webkit-flex: none;
-  -ms-flex: none;
   flex: none;
   position: absolute;
-  -webkit-transform: translateY(2.8em);
-  -ms-transform: translateY(2.8em);
   transform: translateY(2.8em);
   top: 0;
-  width: 100%
+  width: 100%;
 }
-
 .nav-main.active a {
-  width: 100%
+  width: 100%;
 }
-
-@media only screen and (max-width:1023px) {
+.nav-main.active a:hover,
+.nav-main.active a:focus {
+  color: #fff;
+}
+@media only screen and (max-width: 1023px) {
   .nav-main {
-    font-size: .9em
+    font-size: 0.9em;
   }
 }
-
-@media only screen and (max-width:800px) {
+@media only screen and (max-width: 800px) {
   .nav-main {
-    font-size: .75em
+    font-size: 0.75em;
   }
 }
-
-.nav-main {
-  -webkit-box-align: stretch;
-  -webkit-align-items: stretch;
-  -ms-flex-align: stretch;
-  align-items: stretch;
-  height: auto;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-box-ordinal-group: 4;
-  -webkit-order: 3;
-  -ms-flex-order: 3;
-  order: 3;
-  overflow: visible;
-  width: auto;
-  -webkit-transform: translateY(0%);
-  -ms-transform: translateY(0%);
-  transform: translateY(0%);
+@media only screen and (min-width: 569px) {
+  .nav-main {
+    align-items: stretch;
+    height: auto;
+    flex-wrap: nowrap;
+    order: 3;
+    overflow: visible;
+    width: auto;
+    transform: translateY(0%);
+  }
 }
-
+.nav-main .small {
+  display: none;
+}
+@media only screen and (min-width: 569px) {
+  .nav-main .small {
+    display: block;
+    font-size: 0.75em;
+  }
+  .nav-main .small a {
+    padding: 1rem 0.5rem 0.5rem 0.5rem;
+    align-items: center;
+    flex-direction: column;
+    text-transform: uppercase;
+  }
+  .nav-main .small svg {
+    display: block;
+    fill: #fff;
+    margin-bottom: 0.4em;
+  }
+}
+@media only screen and (max-width: 1023px) {
+  .nav-main .small {
+    font-size: 1em;
+  }
+  .nav-main .small a {
+    text-transform: none;
+    padding-top: 2em;
+  }
+  .nav-main .small svg {
+    display: none;
+  }
+}
+.nav-main .chat {
+  display: none;
+}
+@media only screen and (min-width: 569px) {
+  .nav-main .chat {
+    display: block;
+  }
+  .nav-main .chat .links-sub {
+    min-width: 150px;
+    min-width: 9.375rem;
+    background: #f3f3f3;
+    flex-wrap: wrap;
+    width: auto;
+  }
+  .nav-main .chat .more {
+    font-size: 12px;
+    font-size: 0.75rem;
+    display: block;
+    text-align: center;
+    text-transform: none;
+    width: 100%;
+  }
+  .nav-main .chat .wrap-button-chat {
+    min-height: 46px;
+    min-height: 2.875rem;
+    padding: 16px 8px 0px 8px;
+    padding: 1rem 0.5rem 0rem 0.5rem;
+    min-width: 100%;
+  }
+  .nav-main .chat .wrap-button-chat #libchat_btn_widget {
+    border: 1px solid #666;
+  }
+}
 .nav-main .nav-main-list {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: flex-end;
-  -webkit-align-items: flex-end;
-  -ms-flex-align: flex-end;
-  align-items: flex-end;
-  margin-left: 1rem;
-  margin-right: 1rem;
+  display: block;
 }
-
+@media only screen and (min-width: 569px) {
+  .nav-main .nav-main-list {
+    display: flex;
+    align-items: stretch;
+  }
+}
 .nav-main .link-primary {
   position: relative;
-  -webkit-transition: background-color .3s;
-  transition: background-color .3s;
-  width: auto;
+  transition: background-color 0.3s;
+  width: 100%;
 }
-
+@media only screen and (min-width: 569px) {
+  .nav-main .link-primary {
+    width: auto;
+  }
+}
+.nav-main .link-primary .links-sub {
+}
 .nav-main .main-nav-header {
   height: 100%;
-  font-size: 100%
+  font-size: 100%;
 }
-
-.nav-main .main-nav-link,
-.nav-main .main-nav-divider {
-  border-bottom: none;
-  color: #fff;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  height: 100%;
-  text-decoration: none;
+.nav-main .main-nav-header button {
+  border: 0;
+  background: #fff;
+  background-image: none;
+  font-size: inherit;
+  padding: 0;
+}
+.nav-main .main-nav-link {
   padding: 8px;
-  padding: .5rem;
-  padding-top: 2em
+  padding: 0.5rem;
+  display: block;
+  position: relative;
 }
-
+@media only screen and (min-width: 569px) {
+  .nav-main .main-nav-link {
+    border-bottom: none;
+    color: #fff;
+    display: flex;
+    height: 100%;
+    padding-top: 2em;
+  }
+}
 .nav-main .main-nav-link.active {
-  background: #C702C7;
+  background: lightgray;
+  box-shadow:
+    0 0 2px #444,
+    inset 1px 0 0 gray,
+    inset -1px 0 0 gray,
+    inset 0 1px 0 gray;
 }
-
-.nav-main .main-nav-link.no-underline:focus,
 .nav-main .main-nav-link.no-underline:hover {
   text-decoration: none;
   color: #fff;
-  background-color: #C702C7
+  background-color: #c702c7;
 }
-
-@media only screen and (min-width:569px) {
-  .nav-main .main-nav-link:focus,
+@media only screen and (min-width: 569px) {
   .nav-main .main-nav-link:hover {
-    background: #C702C7
+    background: #c702c7;
   }
 }
-
 .nav-main .col-1 {
-  background: #fff
+  background: #fff;
 }
-
 .nav-main .col-2 {
   border-left: 1px solid #000;
-  background: #fff
+  background: #fff;
 }
-
-@media only screen and (min-width:569px) {
+.nav-main .links-sub {
+  display: none;
+  left: 0;
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  position: absolute;
+  top: 100%;
+  transition:
+    max-height 0.3s,
+    margin 0.3s,
+    opacity 0.3s,
+    overflow 0.3s,
+    padding-top 0.3s,
+    padding-bottom 0.3s;
+  width: 31.75em;
+}
+.nav-main .links-sub.push {
+  left: auto;
+  right: 0;
+}
+@media only screen and (min-width: 569px) {
   .nav-main .link-primary.open .main-nav-link {
-    background: #C702C7
+    background: #c702c7;
   }
 }
-
-.nav-main .heading-col {
-  margin: 16px 0 8px 8px;
-  margin: 1rem 0 .5rem .5rem;
+.nav-main .link-primary.open .links-sub {
+  display: none;
+}
+@media only screen and (min-width: 569px) {
+  .nav-main .link-primary.open .links-sub {
+    display: flex;
+    box-shadow: 0 0 2px #444;
+    max-height: 1000px;
+    opacity: 1;
+    overflow: visible;
+  }
+}
+.nav-main .links-sub {
+}
+.nav-main .links-sub a {
   color: #000;
   display: block;
-  font-size: .6em;
-  font-weight: 700;
+  font-weight: 600;
+  padding: 0.5em;
+}
+.nav-main .links-sub a:hover,
+.nav-main .links-sub a:focus {
+  background-color: #c702c7;
+  color: #fff;
+  text-decoration: none;
+}
+.nav-main .links-sub [class*="col-"] {
+  width: 50%;
+}
+.nav-main .links-sub .about {
+  display: block;
+  font-size: 0.6875em;
+  font-weight: normal;
+}
+.nav-main .links-sub .bottom {
+  border-top: 1px solid #000;
+}
+.nav-main .links-sub .bottom.extra span:first-of-type:after {
+  content: url(../../images/arrow-right-sfw.svg);
+  display: inline-block;
+  margin-left: 0.25em;
+}
+.nav-main .links-sub .bottom:not(.extra):after {
+  content: url(../../images/arrow-right-sfw.svg);
+  display: inline-block;
+  margin-left: 0.25em;
+}
+.nav-main .bottom:not(.extra) span:not(:first-of-type):before {
+  color: #007db8;
+  content: "|";
+  display: inline-block;
+  margin-right: 4px;
+}
+.nav-main .heading-col {
+  margin: 16px 0px 8px 8px;
+  margin: 1rem 0rem 0.5rem 0.5rem;
+  color: #000;
+  display: block;
+  font-size: 0.75em;
+  font-weight: bold;
   text-transform: uppercase;
-  padding-bottom: 0
+  padding-bottom: 0;
 }
-
 .nav-page {
-  margin-bottom: 1rem!important
+  margin-bottom: 1rem !important;
 }
-
 .no-csstransitions .link-primary .links-sub {
   height: 0;
   margin: 0;
   overflow: hidden;
   padding: 0;
   position: absolute;
-  width: 0
+  width: 0;
 }
-
-.no-csstransitions .link-primary:focus .links-sub,
-.no-csstransitions .link-primary:hover .links-sub {
+.no-csstransitions .link-primary:hover .links-sub,
+.no-csstransitions .link-primary:focus .links-sub {
   height: auto;
   margin: auto;
   overflow: visible;
   padding: 16px;
   padding: 1rem;
-  width: 600px
+  width: 600px;
 }
-
-.no-flexbox .link-primary.chat:focus .links-sub,
-.no-flexbox .link-primary.chat:hover .links-sub {
-  display: block
+.nav-secondary {
+  border-bottom: 1px solid #dedede;
+  font-size: 16px;
+  font-size: 1rem;
+  margin: 0 20px;
+  z-index: 7000;
 }
-
-.no-flexbox .link-primary.chat:focus .links-sub a,
-.no-flexbox .link-primary.chat:hover .links-sub a {
+@media only screen and (max-width: 320px) {
+  .nav-secondary {
+    background: #333;
+    height: 0;
+    margin: 0;
+    overflow: hidden;
+    padding: 0;
+  }
+  .nav-secondary.active {
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    padding: 0;
+  }
+}
+.nav-secondary ul {
+  list-style: none;
+}
+.nav-secondary .menu > ul > li {
+  display: inline-block;
+  position: relative;
+}
+@media only screen and (max-width: 320px) {
+  .nav-secondary .menu > ul > li {
+    display: block;
+  }
+}
+.nav-secondary .menu > ul > li:nth-child(n + 4) ul {
+  right: 0;
+}
+.nav-secondary .menu > ul > li:hover {
+  background: #dedede;
+  box-shadow: 0 0 2px #444;
+  transition: background-color 0.3s;
+}
+@media only screen and (max-width: 320px) {
+  .nav-secondary .menu > ul > li:hover {
+    background: none;
+    box-shadow: none;
+  }
+}
+.nav-secondary .menu > ul > li:hover li {
+  background: #dedede;
+  border-top: 1px solid #ababab;
+  height: auto;
+  line-height: 1;
+  margin: auto;
+  opacity: 1;
+  overflow: visible;
+  width: 100%;
+  z-index: 7000;
+  transition: opacity 0.3s;
+}
+@media only screen and (max-width: 320px) {
+  .nav-secondary .menu > ul > li:hover li {
+    display: none;
+  }
+}
+.nav-secondary .menu > ul > li:hover li a {
   display: block;
-  width: 100%
+  padding: 16px;
+  padding: 1rem;
 }
-
+.nav-secondary .menu > ul > li > a {
+  display: block;
+  padding: 16px;
+  padding: 1rem;
+}
+@media only screen and (max-width: 320px) {
+  .nav-secondary .menu > ul > li > a {
+    color: white;
+  }
+}
+.nav-secondary .menu > ul > li li {
+  height: 0;
+  line-height: 0;
+  margin: 0;
+  opacity: 0;
+  overflow: hidden;
+  padding: 0;
+  position: relative;
+  width: 0;
+}
+.nav-secondary .menu > ul > li ul {
+  box-shadow: 0 1px 2px #444;
+  position: absolute;
+  width: 320px;
+  width: 20rem;
+}
+.nav-second > li > a:hover {
+  color: #0000ff !important;
+  text-decoration: underline;
+}
+.mobile-display {
+  display: none;
+}
+.hide-mobile-nav-link {
+  display: none;
+}
+.menu--toggle {
+  min-width: 51px;
+  min-width: 3.1875rem;
+  font-size: 16px;
+  font-size: 1rem;
+  background: #000;
+  cursor: pointer;
+  fill: #ebf5ff;
+  order: 1;
+  width: 14.375%;
+  z-index: 7000;
+}
+@media only screen and (min-width: 569px) {
+  .menu--toggle {
+    display: none;
+  }
+}
+.menu--toggle svg {
+  display: block;
+  margin: 1em auto;
+}
+.menu--toggle:hover,
+.menu--toggle:focus {
+  background-color: #c702c7;
+  background-image: none;
+}
+.no-flexbox .link-primary.chat:hover .links-sub,
+.no-flexbox .link-primary.chat:focus .links-sub {
+  display: block;
+}
+.no-flexbox .link-primary.chat:hover .links-sub a,
+.no-flexbox .link-primary.chat:focus .links-sub a {
+  display: block;
+  width: 100%;
+}
 .lte-ie9 .nav-main .links-sub {
-  display: none
+  display: none;
+}
+@media screen and (min-width: 568px) and (max-width: 700px) {
+  .link-primary .search-link {
+    padding-right: 2em;
+  }
+  .link-primary .account-link {
+    padding-left: 1em;
+    padding-right: 1em;
+  }
 }
 
 /* 2. no-flexbox fallbacks */
@@ -495,20 +790,25 @@ h3 {
 .hidden-mobile {
   display: none;
 }
-
-.hidden-non-mobile {
-  display: block;
-}
-
-@media only screen and (min-width: 569px) {
-  .hidden-non-mobile {
-    display: none;
-  }
-}
-
 @media only screen and (min-width: 569px) {
   .hidden-mobile {
     display: block;
+  }
+}
+.inactive-mobile {
+  opacity: 0;
+}
+@media only screen and (min-width: 321px) {
+  .inactive-mobile {
+    opacity: 1;
+  }
+}
+.hidden-non-mobile {
+  display: block;
+}
+@media only screen and (min-width: 569px) {
+  .hidden-non-mobile {
+    display: none;
   }
 }
 
@@ -532,12 +832,6 @@ h3 {
   max-width: 1170px; /* matches .container */
   width: 100%;
   margin: 0 auto;
-}
-
-@media only screen and (max-width:568px) {
-  .header-main>[class*=link] {
-    font-size: 9px
-  }
 }
 
 /* reset only what you need */
