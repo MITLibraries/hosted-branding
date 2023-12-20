@@ -1174,37 +1174,101 @@ body.user-is-tabbing *.nav-main .main-nav-link.no-underline:focus {
   }
 }
 
-/* Local overrides */
+/* Local overrides for libanswers */
 
-/* layout adjustments especially for libanswers */
-@media only screen and (min-width: 1024px) {
-  .header-main .name-site {
-    width: 100%;
-  }
-}
-
-@media only screen and (max-width: 568px) {
-  .header-main .name-site {
-    margin-bottom: 0;
-  }
-}
-
-.header-main, 
-.layout-band {
+/* Reset only what you need */
+.header-main,
+footer {
   max-width: 1170px; /* matches .container */
   width: 100%;
   margin: 0 auto;
+}
+
+.header-main {
+  padding: 0 20px;
+}
+
+.header-main .name-site {
+  margin: 0;
+  padding: 0;
 }
 
 @media only screen and (max-width:568px) {
   .header-main>[class*=link] {
     font-size: 9px
   }
+  .header-main {
+    padding: 0;
+  }
+  .header-main .menu--toggle {
+    margin: auto 0;
+  }
+  .header-main .logo-mit-lib {
+    padding-left: 0;
+  }
 }
 
-/* reset only what you need */
+/* The rules in this media query primarily set alignment for the logos and nav */
+@media only screen and (min-width: 569px) {
+  .header-main {
+    height: 75px; /* matches height of logos, including 20px top/bottom padding */
+  }
+  .header-main .name-site {
+    max-width: 100%;
+  }
+  .nav-main,
+  .nav-main .nav-main-list,
+  .nav-main .nav-main-list li,
+  .nav-main .small a,
+  .nav-main .main-nav-link {
+    height: 100%;
+  }
+  .header-main .logo-mit-lib {
+    padding: 20px 0;
+    vertical-align: baseline;
+  }
+  .nav-main {
+    margin: 0 10px;
+  }
+  .header-main .link-site-search,
+  .header-main .link-account {
+    padding: 20px 0;
+  }
+  .nav-main .small a {
+    flex-direction: column;
+    align-items: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+  .nav-main .main-nav-link {
+    margin: 0;
+    padding: 20px 8px;
+  }
+  .header-main .link-logo-mit {
+    display: none
+  }
+}
+
+/* 635px is the maximum width before the logos will shrink if both are displayed */
+@media only screen and (min-width: 635px) {
+  .header-main .link-logo-mit {
+    display: block;
+    padding: 20px 0;
+    vertical-align: baseline;
+  }
+}
+
+@media only screen and (max-width: 1023px) {
+  .nav-main .small a {
+    flex-direction: row; /* flex-direction and alignment needs to change when the SVGs are hidden */
+    align-items: flex-end;
+    height: 100%;
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+}
+
 .header-main h2 {
-  line-height: normal;
   margin: 0;
   padding: 0;
   border: 0;
@@ -1223,6 +1287,17 @@ body.user-is-tabbing *.nav-main .main-nav-link.no-underline:focus {
   vertical-align: baseline;
   background: 0 0;
   list-style-type: none;
+}
+
+footer a,
+header a {
+  color: #000;
+  text-decoration: none;
+}
+footer a:hover,
+footer a:focus {
+  color: #fff;
+  text-decoration: underline;
 }
 
 .tabs a {

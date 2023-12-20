@@ -812,29 +812,99 @@ body.user-is-tabbing *.nav-main .main-nav-link.no-underline:focus {
   }
 }
 
-/* Local overrides */
+/* Local overrides for LibWizard */
 
-/* layout adjustments especially for libguides */
-@media only screen and (min-width: 1024px) {
-  .header-main .name-site {
-    width: 100%;
-  }
-}
-
-@media only screen and (max-width: 568px) {
-  .header-main .name-site {
-    margin-bottom: 0;
-  }
-}
-
-.header-main, 
-.footer-main-wrap {
+/* Reset only what you need */
+.header-main {
   max-width: 1170px; /* matches .container */
   width: 100%;
   margin: 0 auto;
+  padding: 0 20px;
 }
 
-/* reset only what you need */
+.header-main .name-site {
+  margin: 0;
+  padding: 0;
+}
+
+@media only screen and (max-width:568px) {
+  .header-main>[class*=link] {
+    font-size: 9px
+  }
+  .header-main .logo-mit-lib {
+    padding: 8px 0;
+  }
+  .header-main .link-logo-mit {
+    display: none;
+  }
+  .header-main nav {
+    display: none;
+  }
+  .header-main .link-privacy,
+  .header-main .link-accessibility {
+    align-self: flex-end;
+    display: flex;
+    flex-direction: column;
+    order: 1000;
+    padding-top: 29px;
+    padding-bottom: 8px;
+    color: #fff;
+    font-size: 0.75rem;
+    line-height: normal;
+  }
+  .header-main .link-privacy:hover,
+  .header-main .link-accessibility:hover,
+  .header-main .link-privacy:focus,
+  .header-main .link-accessibility:focus {
+    background-color: #c702c7;
+    text-decoration: none;
+  }
+  .header-main .link-privacy {
+    margin-left: auto;
+  }
+  .header-main .link-accessibility {
+    margin-left: 0.6rem;
+    margin-right: 0.6rem;
+  }
+}
+
+/* The rules in this media query primarily set alignment for the logos and nav */
+@media only screen and (min-width: 569px) {
+  .header-main {
+    height: 75px; /* matches height of logos, including 20px top/bottom padding */
+  }
+  .header-main .name-site {
+    max-width: 100%;
+  }
+  .nav-main,
+  .nav-main .nav-main-list,
+  .nav-main .nav-main-list li,
+  .nav-main .main-nav-link {
+    height: 100%;
+  }
+  .header-main .logo-mit-lib {
+    padding: 20px 0;
+    vertical-align: baseline;
+  }
+  .nav-main {
+    display: flex;
+    flex-direction: column;
+    margin-left: auto;
+    max-width: 100%;
+  }
+  .nav-main .main-nav-link {
+    align-items: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+  .header-main .link-logo-mit {
+    display: block;
+    padding: 20px 0;
+    vertical-align: baseline;
+    margin-left: 20px;
+  }
+}
+
 .header-main h2 {
   margin: 0;
   padding: 0;

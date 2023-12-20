@@ -1,4 +1,8 @@
-<link rel="shortcut icon" href="https://libraries.mit.edu/favicon.ico" type="image/vnd.microsoft.icon" />
+<!-- load favicons for miscellaneous platforms -->
+<link rel="icon" href="https://cdn.libraries.mit.edu/files/branding/favicons/favicon.ico" sizes="32x32">
+<link rel="icon" href="https://cdn.libraries.mit.edu/files/branding/favicons/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="https://cdn.libraries.mit.edu/files/branding/favicons/apple-touch-icon.png"><!-- 180×180 -->
+<link rel="manifest" href="https://cdn.libraries.mit.edu/files/branding/favicons/manifest.json">
 
 <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,400italic,600,600italic,700,700italic">
 
@@ -1115,35 +1119,100 @@ body.user-is-tabbing *.nav-main .main-nav-link.no-underline:focus {
   }
 }
 
-/* Local overrides */
+/* Local overrides for libguides */
 
-/* layout adjustments especially for libguides */
-@media only screen and (min-width: 1024px) {
-  .header-main .name-site {
-    width: 100%;
-  }
-}
-
-@media only screen and (max-width: 568px) {
-  .header-main .name-site {
-    margin-bottom: 0;
-  }
-}
-
-.header-main, 
-.layout-band {
+/* Reset only what you need */
+.header-main,
+footer {
   max-width: 1170px; /* matches .container */
   width: 100%;
   margin: 0 auto;
+}
+
+.header-main {
+  padding: 0 20px;
+}
+
+.header-main .name-site {
+  margin: 0;
+  padding: 0;
 }
 
 @media only screen and (max-width:568px) {
   .header-main>[class*=link] {
     font-size: 9px
   }
+  .header-main {
+    padding: 0;
+  }
+  .header-main .menu--toggle {
+    margin: auto 0;
+  }
+  .header-main .logo-mit-lib {
+    padding-left: 0;
+  }
 }
 
-/* reset only what you need */
+/* The rules in this media query primarily set alignment for the logos and nav */
+@media only screen and (min-width: 569px) {
+  .header-main {
+    height: 75px; /* matches height of logos, including 20px top/bottom padding */
+  }
+  .header-main .name-site {
+    max-width: 100%;
+  }
+  .nav-main,
+  .nav-main .nav-main-list,
+  .nav-main .nav-main-list li,
+  .nav-main .small a,
+  .nav-main .main-nav-link {
+    height: 100%;
+  }
+  .header-main .logo-mit-lib {
+    padding: 20px 0;
+    vertical-align: baseline;
+  }
+  .nav-main {
+    margin: 0 10px;
+  }
+  .header-main .link-site-search,
+  .header-main .link-account {
+    padding: 20px 0;
+  }
+  .nav-main .small a {
+    flex-direction: column;
+    align-items: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+  .nav-main .main-nav-link {
+    margin: 0;
+    padding: 20px 8px;
+  }
+  .header-main .link-logo-mit {
+    display: none
+  }
+}
+
+/* 635px is the maximum width before the logos will shrink if both are displayed */
+@media only screen and (min-width: 635px) {
+  .header-main .link-logo-mit {
+    display: block;
+    padding: 20px 0;
+    vertical-align: baseline;
+  }
+}
+
+@media only screen and (max-width: 1023px) {
+  .nav-main .small a {
+    flex-direction: row; /* flex-direction and alignment needs to change when the SVGs are hidden */
+    align-items: flex-end;
+    height: 100%;
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+}
+
 .header-main h2 {
   margin: 0;
   padding: 0;
@@ -1163,6 +1232,17 @@ body.user-is-tabbing *.nav-main .main-nav-link.no-underline:focus {
   vertical-align: baseline;
   background: 0 0;
   list-style-type: none;
+}
+
+footer a,
+header a {
+  color: #000;
+  text-decoration: none;
+}
+footer a:hover,
+footer a:focus {
+  color: #fff;
+  text-decoration: underline;
 }
 
 h1#s-lg-guide-name {
@@ -1343,29 +1423,5 @@ height:auto;
 .alert-banner .fa {
   display: inline-block;
   margin-right: 0.5em;
-}
-</style>
-<style>
-/*styling for a-z databases */
-/* Hide the Database Types dropdown */
-#col-types {
-    display: none;
-}
-/* Hide the Vendors dropdown */
-#col-vendors {
-    display: none;
-}
-/*change a to z database titles to be larger */
-#s-lg-az-results .s-lg-az-result-title {
-font-size: 1.1em;
-}
-/*change a to z databases alternative title sizing */
-div.s-lg-az-result-keywords {
-font-size: .9em;
-}
-/* Change letter heading sizes*/
-h3.s-lg-db-panel-title {
-    margin: 0;
-    font-size: 1.3em;
 }
 </style>
