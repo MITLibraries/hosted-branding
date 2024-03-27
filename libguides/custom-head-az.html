@@ -12,65 +12,6 @@
 <!--meta tag to scale mobile device display-->
 <meta name="viewport" content="width=device-width, maximum-scale=1">
 
-<script type="text/javascript">
-jQuery(document).ready(function($) {
-  jQuery("img[alt='null'], img[alt='Null'], img[alt='NULL']").attr("alt", "");
-  var libchat_efc75c55947db323d4faab725b79307f = { iid:59, key:'fb10446730e271c', width:'240' };
-
-  $('header .menu--toggle').click(function(){
-    $('#nav-main').toggleClass('active');
-    $('.wrap-page').toggleClass('mobile-nav-active');
-  });
-
-  $( '.link-primary' ).bind( "mouseenter", function() { 
-    $( '.link-primary' ).removeClass( 'open' );
-    $(this).find( '.menu-control' ).attr( 'aria-expanded', 'true' );
-    $(this).closest( '.link-primary' ).addClass( 'open' );
-  });
-  $( '.link-primary' ).bind( "mouseleave", function() { 
-    $(this).find( '.menu-control' ).attr( 'aria-expanded', 'false' );
-    $( '.link-primary' ).removeClass( 'open' );
-  });
-
-  // make esc close all menus
-  $( '#nav-main' ).on( 'keydown' , function(e) {
-    if (e.keyCode == 27) {
-      hideMenu(e);
-    }
-  });
-
-  function hideMenu() {
-    $( '.link-primary' ).removeClass( 'open' );
-    $( '.menu-control' ).attr('aria-expanded', 'false');
-    $( '.links-sub' ).attr( 'aria-hidden', 'true' );
-  }
-
-  // thanks to http://heydonworks.com/practical_aria_examples/
-  $('.main-nav-header').each(function() {
-
-    var $this = $(this);
-
-    // create unique id for a11y relationship
-    var id = 'collapsible-' + $( '#nav-main h2' ).index(this);
-
-    // identify panel and make it focusable
-    var panel = $(this).next( '.links-sub' ).attr( 'aria-hidden', 'true' ).attr( 'id', id);
-
-    // Add default aria states to button
-    $this.children( '.menu-control' ).attr( 'aria-expanded', 'false' ).attr( 'aria-controls', id);
-    var button = $this.children( '.menu-control' );
-
-    // Toggle the state properties
-    button.on( 'click', function() {
-      $(this).closest( '.link-primary' ).toggleClass( 'open' );
-      var state = $(this).attr( 'aria-expanded' ) === 'false' ? true : false;
-      $(this).attr( 'aria-expanded', state );
-      panel.attr( 'aria-hidden', !state );
-    });
-  });
-});
-</script>
-
 <style type="text/css">
 /* Basic layout rules */
 * {
@@ -1124,7 +1065,6 @@ body.user-is-tabbing *.nav-main .main-nav-link.no-underline:focus {
 /* Reset only what you need */
 .header-main,
 footer {
-  max-width: 1170px; /* matches .container */
   width: 100%;
   margin: 0 auto;
 }
@@ -1191,15 +1131,6 @@ footer {
   }
   .header-main .link-logo-mit {
     display: none
-  }
-}
-
-/* 635px is the maximum width before the logos will shrink if both are displayed */
-@media only screen and (min-width: 635px) {
-  .header-main .link-logo-mit {
-    display: block;
-    padding: 20px 0;
-    vertical-align: baseline;
   }
 }
 
@@ -1426,27 +1357,141 @@ height:auto;
 }
 </style>
 
-<!-- Styling for A-Z databases -->
+<!-- Styling for the A-Z Databases 2024 UI redesign -->
 <style>
-/* Hide the Database Types dropdown */
-#col-types {
-    display: none;
+/* NOTE: At some point, LibGuides and the new A-Z Databases will share a 'Look and Feel' template, as they do with
+  the old A-Z Databases. This CSS should be reevaluated then to ensure that both properties look as expected. */
+#s-lg-az-trials {
+  background-color: #e4e4e4;
 }
-/* Hide the Vendors dropdown */
-#col-vendors {
-    display: none;
+
+#s-lg-az-trials .az-description {
+  color: #000;
 }
-/*change a to z database titles to be larger */
-#s-lg-az-results .s-lg-az-result-title {
-font-size: 1.1em;
+
+#s-lib-public-header-title {
+  margin-bottom: .5rem;
 }
-/*change a to z databases alternative title sizing */
-div.s-lg-az-result-keywords {
-font-size: .9em;
+
+#s-lg-az-filter-cols div.row>div,
+#s-lg-az-filter-cols div.row>div:last-child {
+  border: 1px solid #c7ccd1;
+  border-radius: .5em;
+  margin-right: 1em;
 }
-/* Change letter heading sizes*/
-h3.s-lg-db-panel-title {
-    margin: 0;
-    font-size: 1.3em;
+
+#s-lg-az-filter-cols div.row>div:first-child {
+  margin-left: 1em;
+}
+
+#col-search input,
+.col-subjects input,
+.col-types input,
+.col-vendors input,
+#col-search input::placeholder,
+.col-subjects textarea::placeholder,
+.col-types textarea::placeholder,
+.col-vendors textarea::placeholder {
+  font-size: 1rem!important;
+}
+
+#az-public-mobile-filters input,
+.select2-results__option,
+.select2-results__options,
+#az-public-mobile-filters .select2-selection__choice,
+#s-lg-az-filters .select2-selection__choice,
+.select2-container--bootstrap5 .select2-search.select2-search--inline .select2-search__field,
+#az-public-mobile-filters input::placeholder,
+.select2-container--bootstrap5 .select2-search.select2-search--inline .select2-search__field::placeholder {
+  font-size: 1rem;
+}
+
+button[data-bs-dismiss="modal"] {
+  background-color: #c6c7c8;
+}
+
+#s-lg-az-index button.s-lg-az-header:hover,
+#s-lg-az-index button.s-lg-az-header:focus {
+  text-decoration: underline;
+}
+
+.az-configured-fields-label,
+.az-configured-fields-value {
+  font-family: Helvetica, "Open Sans", sans-serif;
+  font-size: 1rem;
+  color: #000;
+}
+
+.nav-main .main-nav-header {
+  font-weight: 500;
+}
+
+/* The rules below accommodate different Bootstrap versions in LibGuides and the new A-Z Databases.
+
+LibGuides currently uses Bootstrap 3, which has the following breakpoints:
+- min-width: 1200px (max-width: 1170px)
+- min-width: 992px (max-width: 970px)
+- min-width: 768px (max-width: 750px)
+
+The new A-Z uses Bootstrap 5, which has different breakpoints:
+- min-width: 1400px (max-width: 1320px),
+- min-width: 1200px (max-width: 1140px),
+- min-width: 992px (max-width: 960px),
+- min-width: 768px (max-width: 720px),
+- min-wifdth: 576px (max-width: 540px)
+
+Springshare has indicated that the same customizations will soon apply both to LibGuides and A-Z Databases, which would
+cause a conflict. However, they also plan to move LibGuides to Bootstrap 5, which they will hopefully do before
+collapsing the customizations. We are awaiting clarification on this. */
+@media only screen and (min-width: 576px) {
+  .header-main,
+  footer {
+    max-width: 540px; /* matches .container */
+    width: 100%;
+    margin: 0 auto;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .header-main,
+  footer {
+    max-width: 720px; /* matches .container */
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  /* This rule was previously set at a min-width of 635px for Bootstrap 3 */
+  .header-main .link-logo-mit {
+    display: block;
+    padding: 20px 0;
+    vertical-align: baseline;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  .header-main,
+  footer {
+    max-width: 960px; /* matches .container */
+    width: 100%;
+    margin: 0 auto;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .header-main,
+  footer {
+    max-width: 1140px; /* matches .container */
+    width: 100%;
+    margin: 0 auto;
+  }
+}
+
+@media only screen and (min-width: 1400px) {
+  .header-main,
+  footer {
+    max-width: 1320px; /* matches .container */
+    width: 100%;
+    margin: 0 auto;
+  }
 }
 </style>
