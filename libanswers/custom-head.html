@@ -1339,4 +1339,22 @@ ol.breadcrumb.s-la-color-bars.s-la-color-bars-border {
 line-height: inherit;
 }
 
+/* to hide 2nd breadcrumb and complete search bar from FAQ Group index, faq, and search pages */
+body.s-la-page-home #s-la-public-header,
+body.s-la-page-single.search #s-la-public-header
+{display: none;}
+
+/*hide 2nd breadcrumb*/
+body.s-la-page-home #s-la-bc > div > ol > li:nth-child(2),
+body.s-la-page-faq #s-la-bc > div > ol > li:nth-child(2),
+body.s-la-page-single.search #s-la-bc > div > ol > li:nth-child(2)
+{display:none;}
+
+
+body.s-la-page-home #s-la-page-title-bar {display: none;}
+
+/* keep the header and search bar ONLY on the homepage */
+#s-la-page-1401 #s-la-page-title-bar {display: block;}
+#s-la-page-1401 #s-la-public-header {display: block;}
+
 </style>
