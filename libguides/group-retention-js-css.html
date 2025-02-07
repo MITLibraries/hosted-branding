@@ -1,0 +1,183 @@
+<!-- Data Tables CDN for JS and Styles -->
+<link rel="stylesheet" href="https://cdn.datatables.net/2.1.8/css/dataTables.dataTables.css" />  
+<script src="https://cdn.datatables.net/2.1.8/js/dataTables.js"></script>
+
+<script>
+$(document).ready( function () {
+    $('#retention-schedules').DataTable({
+      order: [
+        [0, 'asc']
+    ],
+      responsive: true,
+      columnDefs: [{ className: 'id', targets: [0] }],
+      lengthMenu: [25, 50, 100, 200, { label: 'All', value: -1 }]
+    });
+} );
+</script>
+
+<style>
+  /* General Styles */
+  #s-lg-guide-tabs {
+    display: none;
+  }
+
+  #s-lg-guide-header {display: none;}
+
+  /* ====================== */
+  /* RECORD RETENTION TABLE */
+  /* ====================== */
+
+  /* Custom table title and breadcrumb */
+  h3.custom-title {
+    font-size: 30px;
+  }
+
+  /* Custom breadcrumbs */
+  div.custom-breadcrumbs {
+    font-size: 12px;
+  }
+
+  div.custom-breadcrumbs span {
+    margin: 0 0.25em;
+  }
+
+  div.custom-breadcrumbs span.current {
+    color: #666;
+    margin: 0;
+  }
+
+  /* Table related styling */
+  div.dt-layout-table {
+    background-color: #f8f8f8;
+    border: 1px solid #ccc;
+    border-top: none;
+    border-radius: 0 0 4px 4px;
+    margin-top: 0 !important;
+  }
+
+  div.dt-container.dt-empty-footer tbody > tr:last-child > * {
+    border-bottom: none;
+  }
+
+  #retention-schedules th {
+    border-top: 1px solid #ddd;
+  }
+
+  #retention-schedules th .dt-column-title {
+      color: #555;
+      font-size: 0.9rem;
+  }
+
+  #retention-schedules .dt-ordering-asc .dt-column-title {
+      color: #171717;
+  }
+
+  /* Row above the table for search and length controls */
+  .dt-layout-row:first-of-type {
+    background-color: #f8f8f8;
+    border: 1px solid #ccc;
+    border-bottom: none;
+    border-radius: 4px 4px 0 0;
+    margin-bottom: 0 !important;
+    padding: 12px;
+  }
+
+  #retention-schedules tbody {background-color: #fff;}
+
+  #retention-schedules tbody tr:nth-child(even) td {
+    background-color: #f8f8f8;
+  }
+
+  #retention-schedules tbody tr:hover td {
+    background-color: #eee;
+  }
+
+  #retention-schedules_wrapper .dt-search label, #retention-schedules_wrapper .dt-length label {
+    color: #555;
+    font-size: 0.9rem;
+    padding: 0 8px;
+  }
+
+  #retention-schedules_wrapper input, #retention-schedules_wrapper select {
+    background-color: #fff;
+    border: 1px solid #999;
+    border-radius: 1px;
+    padding: 7px 12px 6px;
+    height: 32px;
+  }
+
+  /* Footer below table */
+  #retention-schedules_info {
+    font-size: 0.85rem;
+    color: #666;
+  }
+
+  #retention-schedules_wrapper .dt-paging {
+    font-size: 0.85rem;
+  }
+
+  /* ============================================= */
+  /* INDIVIDUAL RECORD RETENTION SCHEDULE TEMPLATE */
+  /* ============================================= */
+  p.identifier {
+    color: #444;
+    font-style: italic;
+  }
+
+  .card {
+    border: 1px solid #ccc;
+    padding: 16px 24px;
+    margin-top: 24px;
+  }
+
+  #schedule-blocks {
+    display: flex;
+    gap: 24px;
+    padding-top: 24px;
+  }
+
+  @media only screen and (max-width: 600px) {
+    #schedule-blocks {
+      flex-direction: column;
+    }
+  }
+
+  #schedule-blocks .card {
+    flex-grow: 1;
+    flex-basis: 0;
+    margin-top: 0;
+  }
+
+  #schedule-blocks h3 {
+    font-weight: 600;
+  }
+
+  #schedule-blocks dl {
+    padding-top: 8px;
+    margin-bottom: 0;
+  }
+
+  #schedule-blocks dt {
+    margin-bottom: 2px;
+  }
+
+  #schedule-blocks dd {
+    margin-bottom: 8px;
+  }
+
+  #schedule-metadata {
+    margin-top: 32px;
+  }
+
+  #schedule-metadata h4 {
+    font-size: 14px;
+    font-weight: bold;
+  }
+
+  #schedule-metadata p {
+    font-size: 14px;
+    color: #444;
+    margin-bottom: 14px;
+  }
+
+</style>
