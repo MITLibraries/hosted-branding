@@ -816,7 +816,6 @@ body.user-is-tabbing *.nav-main .main-nav-link.no-underline:focus {
 
 /* Reset only what you need */
 .header-main {
-  max-width: 1170px; /* matches .container */
   width: 100%;
   margin: 0 auto;
   padding: 0 20px;
@@ -826,6 +825,18 @@ body.user-is-tabbing *.nav-main .main-nav-link.no-underline:focus {
   margin: 0;
   padding: 0;
 }
+
+/* Adjust form container and header max widths together */
+.header-main {
+  max-width: 800px; 
+}
+
+#form {
+  max-width: calc(2rem + 800px);
+  padding-top: 0;
+}
+
+/* END container width matching */
 
 @media only screen and (max-width:568px) {
   .header-main>[class*=link] {
@@ -1090,11 +1101,51 @@ height:auto;
 
 #header-text {
   max-width: 1140px;
+  padding-left: 2rem;
+  padding-right: 2rem;
 }
 
 #canvas-container {
   max-width: 1140px;
   margin: 0 auto;
+}
+
+.text-center {
+  text-align: left !important;
+}
+
+h2, h3 {
+  font-weight: 700;
+}
+
+input::placeholder, select::placeholder, textarea::placeholder {
+  font-size: 16px !important;
+  font-style: normal !important;
+}
+
+input, select, textarea {
+  margin-bottom: 8px;
+}
+
+.text-14 {
+  font-size: 16px !important;
+  font-weight: 400;
+}
+
+mat-checkbox label {
+  font-size: 16px;
+  color: #000;
+}
+
+span.required-label, .invalid-feedback.required {
+  font-size: 1rem !important;
+}
+
+@media only screen and (max-width:599px) {
+  #header-text {
+    padding-left: 1.4375rem;
+    padding-right: 1.4375rem;
+  }
 }
 
 </style>
