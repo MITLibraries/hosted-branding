@@ -949,10 +949,6 @@ h1#s-lg-guide-name {
     text-rendering: optimizeLegibility;
 }
 
-.ui-widget-content a, a {
-  text-decoration: none;
-}
-
 .ui-widget-content a {
   text-decoration: underline;
   color: #000;
@@ -1127,6 +1123,11 @@ input, select, textarea {
   margin-bottom: 8px;
 }
 
+.mdc-form-field label {
+  font-size: 16px;
+  letter-spacing: 0;
+}
+
 .text-14 {
   font-size: 16px !important;
   font-weight: 400;
@@ -1146,6 +1147,13 @@ span.required-label, .invalid-feedback.required {
     padding-left: 1.4375rem;
     padding-right: 1.4375rem;
   }
+}
+
+/* Style disabled inputs as disabled (used for fields filled by Touchstone) */
+input[readonly], input[readonly]:focus {
+  background-color: #eee;
+  border-color: #dee2e6;
+  cursor: not-allowed;
 }
 
 </style>
